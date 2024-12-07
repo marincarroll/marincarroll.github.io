@@ -1,0 +1,45 @@
+---
+import { basics } from "@cv";
+
+import Mail from "../icons/Mail.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import GitHub from "@/icons/GitHub.astro";
+import type { SocialIcon } from "@/types";
+
+const SOCIAL_ICONS: SocialIcon = {
+    GitHub,
+    LinkedIn,
+};
+const { profiles, phone, email } = basics;
+
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
+
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+---
+<section class="contact-info">
+    <div class="print">
+        {printInfo}
+    </div>
+    <div class="no-print">
+        {
+            email && (
+                        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+                            <Mail /> Email me
+                        </a>
+            )
+        }
+        {
+            profiles.map(({ network, url }) => {
+                const Icon = SOCIAL_ICONS[network];
+
+                return (
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                            <Icon />
+                            {network}
+                        </a>
+                );
+            })
+        }
+    </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import { basics } from "@cv";
+const { name } = basics;
+---
+<header class="header">
+    <h1 class="header__name">{name}</h1>
+</header>
+<style>
+    .header {
+        position: fixed;
+        display: inline-flex;
+        align-items: flex-end;
+        height: var(--header-height);
+        font-size: 5rem;
+        z-index: 1;
+        top: var(--border-width);
+        background: var(--color--dark);
+        border-bottom-right-radius: 2rem;
+        padding-right: 0.3em;
+        padding-bottom: 0.1em;
+    }
+
+    .header__name {
+        font-family: var(--font-family--display);
+        font-size: inherit;
+        margin: 0;
+    }
+</style>

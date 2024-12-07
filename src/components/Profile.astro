@@ -1,0 +1,21 @@
+---
+import ContactInfo from './ContactInfo.astro';
+import { basics } from "@cv";
+const { summary, label, location } = basics;
+const { city, region } = location;
+---
+<div class="profile">
+    <h2>{label}</h2>
+    <p>{city}, {region}</p>
+    <p>{summary}</p>
+    <ContactInfo/>
+</div>
+
+<style>
+    .profile {
+        position: sticky;
+        top: 0;
+        padding-top: calc( var(--header-height) + 2em);
+        padding-bottom: 4em;
+    }
+</style>
