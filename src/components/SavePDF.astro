@@ -1,8 +1,14 @@
 ---
+import PDFIcon from "../icons/pdf.astro";
 
 ---
 <div class="save-pdf decorative-curve">
-    <button class="save-pdf__button">PDF</button>
+    <button onclick="console.log('test')" class="save-pdf__button">
+        <span class="save-pdf__icon">
+            <PDFIcon/>
+        </span>
+        PDF
+    </button>
 </div>
 <style>
     .save-pdf {
@@ -12,7 +18,9 @@
         display: inline-block;
         background: var(--color--dark);
         border-top-left-radius: var(--border-radius);
-        padding: 1em 2em;
+        padding: 0.8em 0.35em 0.35em 0.8em;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .save-pdf::before,
@@ -29,5 +37,26 @@
     .save-pdf::after {
        top: 0;
         right: 0;
+    }
+
+    .save-pdf__button {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--color--light);
+        padding: 0.1em 0.3em;
+        line-height: 1;
+        border-radius: calc(var(--border-radius) * 0.5);
+        display: flex;
+        font-size: 1.5rem;
+        align-items: center;
+        font-family: var(--font-family--body);
+        gap: 0.3em;
+        letter-spacing: 0.05em;
+    }
+
+    .save-pdf__icon {
+        width: 1.5em;
+        margin-top: 0.1em;
     }
 </style>

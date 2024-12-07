@@ -19,8 +19,10 @@ CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
 -[] Audit VoiceOver
 -[] SEO
 -[] Structured data
+-[] Review wierd devices like apple watch?
+-[] PageSpeed Insights
 
 ### Features
-- Explore possibility of custom-yet-not-annoying scrollbars?
-
+- Explore possibility of custom-yet-not-annoying scrollbars? If such a thing exists
+- ^^ but for cursors
 
