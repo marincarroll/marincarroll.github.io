@@ -33,14 +33,16 @@ const { title, pageName } = Astro.props;
 		<link rel="stylesheet" href="/themes/themes.css" />
 	</head>
 	<body>
-		<slot/>
+		<div class="body__wrapper">
+			<slot/>
+		</div>
 	</body>
 </html>
 <style is:global>
 	:root {
 		/* opacity hack for Safari ::selection */
-		--color--light: rgba(255, 191, 203, 0.99);
-		--color--dark: rgba(3, 1, 3, 0.99);
+		--color--light: rgb(255, 191, 203);
+		--color--dark: rgb(3, 1, 3);
 		--color--foreground: var(--color--light);
 		--color--background: var(--color--dark);
 		--font-family--body: "DM Mono", monospace;
@@ -73,6 +75,16 @@ const { title, pageName } = Astro.props;
 		color: var(--color--light);
 		height: 100vh;
 		overflow: hidden;
+		-webkit-user-select: none;
+	}
+
+	.body__wrapper {
+		overflow-y: scroll;
+		height: 100%;
+		border-radius: var(--border-radius);
+		max-width: var(--content-width);
+		margin-inline: auto;
+		-webkit-user-select: text;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

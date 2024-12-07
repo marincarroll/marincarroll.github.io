@@ -9,26 +9,16 @@ import Profile from "../components/Profile.astro";
 
 ---
 <Layout>
-	<div class="body__wrapper">
-		<Header/>
-		<Profile/>
-		<main class="main">
-			<Work/>
-			<Education/>
-			<Interests/>
-			<SavePDF/>
-		</main>
-	</div>
+	<Header/>
+	<Profile/>
+	<main class="main">
+		<Work/>
+		<Education/>
+		<Interests/>
+		<SavePDF/>
+	</main>
 </Layout>
 <style is:global>
-	.body__wrapper {
-		overflow-y: scroll;
-		height: 100%;
-		border-radius: var(--border-radius);
-		max-width: var(--content-width);
-		margin-inline: auto;
-	}
-
 	.main {
 		background-color: var(--color--light);
 		color: var(--color--dark);
