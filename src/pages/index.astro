@@ -1,9 +1,6 @@
 ---
 import Header from "../components/Header.astro";
-import Work from "../components/Work.astro";
-import Education from "../components/Education.astro";
-import Interests from "../components/Interests.astro";
-import SavePDF from "../components/SavePDF.astro";
+import Footer from "../components/Footer.astro";
 import Profile from "../components/Profile.astro";
 
 import { basics } from "@cv";
@@ -45,7 +42,7 @@ const { title, pageName } = Astro.props;
 		<Profile/>
 		<Resume/>
 	</main>
-	<SavePDF/>
+	<Footer/>
 </div>
 </body>
 </html>
@@ -80,7 +77,7 @@ const { title, pageName } = Astro.props;
 	:focus-visible {
 		outline: 2px currentColor dashed;
 	}
-	
+
 	body {
 		margin: 0;
 		font-style: normal;

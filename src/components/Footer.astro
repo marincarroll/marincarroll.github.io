@@ -2,20 +2,27 @@
 import PDFIcon from "../icons/pdf.astro";
 
 ---
-<footer class="save-pdf decorative-curve">
-    <button onclick="console.log('test')" class="save-pdf__button">
+<footer class="footer">
+    <div class="save-pdf decorative-curve">
+        <button onclick="console.log('test')" class="save-pdf__button">
         <span class="save-pdf__icon">
             <PDFIcon/>
         </span>
-        PDF
-    </button>
+            PDF
+        </button>
+    </div>
 </footer>
 <style>
-    .save-pdf {
+    .footer {
         position: sticky;
         bottom: 0;
-        left: 100%;
-        display: inline-block;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .save-pdf {
+        position: absolute;
+        bottom: 0;
         background: var(--color--dark);
         border-top-left-radius: var(--border-radius);
         padding: 0.8em 0.35em 0.35em 0.8em;
