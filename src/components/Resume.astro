@@ -1,0 +1,29 @@
+---
+import Education from "./Education.astro";
+import Work from "./Work.astro";
+import ResumeSection from "./ResumeSection.astro";
+---
+<section class="resume">
+    <ResumeSection title="Experience">
+        <Work/>
+    </ResumeSection>
+    <ResumeSection title="Education">
+        <Education/>
+    </ResumeSection>
+    <ResumeSection title="Professional Interests">
+        ty for visiting
+    </ResumeSection>
+</section>
+<style>
+    .resume {
+        background-color: var(--color--light);
+        color: var(--color--dark);
+        border-radius: var(--border-radius);
+        position: relative;
+    }
+
+    .resume ::selection {
+        background-color: var(--color--dark);
+        color: var(--color--light);
+    }
+</style>

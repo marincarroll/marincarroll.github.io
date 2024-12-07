@@ -4,12 +4,12 @@ import { basics } from "@cv";
 const { summary, label, location } = basics;
 const { city, region } = location;
 ---
-<div class="profile">
+<section class="profile">
     <h2>{label}</h2>
     <p>{city}, {region}</p>
     <p>{summary}</p>
     <ContactInfo/>
-</div>
+</section>
 
 <style>
     .profile {
