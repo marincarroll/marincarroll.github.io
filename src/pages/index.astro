@@ -8,25 +8,26 @@ import SavePDF from "../components/SavePDF.astro";
 import Profile from "../components/Profile.astro";
 
 ---
+
 <Layout>
 	<Header/>
 	<Profile/>
-	<main class="main">
+	<section class="resume">
 		<Work/>
 		<Education/>
 		<Interests/>
 		<SavePDF/>
-	</main>
+	</section>
 </Layout>
 <style is:global>
-	.main {
+	.resume {
 		background-color: var(--color--light);
 		color: var(--color--dark);
 		border-radius: inherit;
 		position: relative;
 	}
 
-	.main ::selection {
+	.resume ::selection {
 		background-color: var(--color--dark);
 		color: var(--color--light);
 	}
