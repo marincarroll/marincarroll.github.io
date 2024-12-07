@@ -2,7 +2,7 @@
 import { basics } from "@cv";
 const { name } = basics;
 ---
-<header class="header">
+<header class="header decorative-curve">
     <h1 class="header__name">{name}</h1>
 </header>
 <style>
@@ -15,9 +15,18 @@ const { name } = basics;
         z-index: 1;
         top: var(--border-width);
         background: var(--color--dark);
-        border-bottom-right-radius: 2rem;
+        border-bottom-right-radius: var(--border-radius);
         padding-right: 0.3em;
         padding-bottom: 0.1em;
+    }
+
+    .header::before {
+        bottom: calc(-2 * var(--border-radius));
+    }
+
+    .header::after {
+        top: 0;
+        right: calc(-1 * var(--border-radius));
     }
 
     .header__name {
@@ -25,4 +34,5 @@ const { name } = basics;
         font-size: inherit;
         margin: 0;
     }
+
 </style>

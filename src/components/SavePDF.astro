@@ -1,7 +1,7 @@
 ---
 
 ---
-<div class="save-pdf">
+<div class="save-pdf decorative-curve">
     <button class="save-pdf__button">PDF</button>
 </div>
 <style>
@@ -11,6 +11,23 @@
         left: 100%;
         display: inline-block;
         background: var(--color--dark);
+        border-top-left-radius: var(--border-radius);
         padding: 1em 2em;
+    }
+
+    .save-pdf::before,
+    .save-pdf::after {
+        transform: rotate(-180deg);
+        transform-origin: top;
+    }
+
+    .save-pdf::before {
+        bottom: calc(-2 * var(--border-radius));
+        left: calc(-1 * var(--border-radius));
+    }
+
+    .save-pdf::after {
+       top: 0;
+        right: 0;
     }
 </style>

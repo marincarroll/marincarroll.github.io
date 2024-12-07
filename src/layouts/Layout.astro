@@ -48,6 +48,7 @@ const { title, pageName } = Astro.props;
 		--content-width: 800px;
 		--border-width: 25px;
 		--header-height: 9rem;
+		--border-radius: 2rem;
 	}
 
 	* {
@@ -101,5 +102,17 @@ const { title, pageName } = Astro.props;
 		.print {
 			display: block !important;
 		}
+	}
+
+	.decorative-curve::before,
+	.decorative-curve::after {
+		content: "";
+		position: absolute;
+		background-color: transparent;
+		height: calc(2 * var(--border-radius));
+		width: var(--border-radius);
+		border-top-left-radius: var(--border-radius);
+		box-shadow: 0 calc(-1 * var(--border-radius)) 0 0 var(--color--dark);
+		z-index: -1;
 	}
 </style>
