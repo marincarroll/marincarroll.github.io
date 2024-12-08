@@ -3,7 +3,7 @@ import Education from "./Education.astro";
 import Work from "./Work.astro";
 import ResumeSection from "./ResumeSection.astro";
 ---
-<section class="resume">
+<section class="resume" x-intersect:margin.0.0.0.100px="open = true"">
     <ResumeSection title="Experience">
         <Work/>
     </ResumeSection>
@@ -22,7 +22,7 @@ import ResumeSection from "./ResumeSection.astro";
         position: relative;
     }
 
-    .resume ::selection {
+    :global(.resume ::selection ) {
         background-color: var(--color--dark);
         color: var(--color--light);
     }

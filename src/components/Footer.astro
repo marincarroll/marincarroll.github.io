@@ -3,7 +3,7 @@ import PDFIcon from "../icons/pdf.astro";
 
 ---
 <footer class="footer">
-    <div class="save-pdf decorative-curve">
+    <div class="save-pdf">
         <button onclick="console.log('test')" class="save-pdf__button">
         <span class="save-pdf__icon">
             <PDFIcon/>
@@ -15,9 +15,10 @@ import PDFIcon from "../icons/pdf.astro";
 <style>
     .footer {
         position: sticky;
-        bottom: 0;
+        bottom: var(--border-width);
         display: flex;
         justify-content: flex-end;
+        z-index: 1;
     }
 
     .save-pdf {
@@ -32,18 +33,24 @@ import PDFIcon from "../icons/pdf.astro";
 
     .save-pdf::before,
     .save-pdf::after {
-        transform: rotate(-180deg);
-        transform-origin: top;
+        content: "";
+        position: absolute;
+        background: transparent;
+        height: calc(2 * var(--border-radius));
+        width: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        box-shadow: 0 calc(1 * var(--border-radius)) 0 0 var(--color--dark);
+        z-index: -1;
     }
 
     .save-pdf::before {
-        bottom: calc(-2 * var(--border-radius));
-        left: calc(-1 * var(--border-radius));
+        top: calc(-2 * var(--border-radius));
+        right: 0;
     }
 
     .save-pdf::after {
-       top: 0;
-        right: 0;
+        bottom: 0;
+        left: calc(-1 * var(--border-radius));
     }
 
     .save-pdf__button {

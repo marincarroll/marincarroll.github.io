@@ -2,10 +2,12 @@
 import { basics } from "@cv";
 const { name } = basics;
 ---
-<header class="header decorative-curve" x-data="{ open: false }">
-    <button @click="open = ! open">Expand</button>
-    <h1 class="header__name"  :class="{ 'test': open }">{name}</h1>
+<header class="header">
+    <div class="header__tab">
+        <h1 class="header__name"  :class="{ 'test': open }">{name}</h1>
+    </div>
 </header>
+
 <style>
     .test {
         background: greenyellow;
@@ -13,23 +15,48 @@ const { name } = basics;
 
     .header {
         position: fixed;
+        top: 0;
+        margin-inline: calc(-1* var(--border-width));
+        z-index: 1;
+        width: 100%;
+        bottom: 0;
+        max-width: inherit;
+        pointer-events: none;
+        border-radius: calc( var(--border-radius) * 2);
+        border: var(--border-width) solid var(--color--dark);
+        box-shadow: 0 99px 0 var(--color--dark),
+                    0 -99px 0 var(--color--dark);
+    }
+
+    .header__tab {
+        font-size: 5rem;
         display: inline-flex;
         align-items: flex-end;
         height: var(--header-height);
-        font-size: 5rem;
-        z-index: 1;
-        top: var(--border-width);
         background: var(--color--dark);
         border-bottom-right-radius: var(--border-radius);
         padding-right: 0.3em;
         padding-bottom: 0.1em;
+        position: relative;
     }
 
-    .header::before {
+    .header__tab::before,
+    .header__tab::after {
+        content: "";
+        position: absolute;
+        background: transparent;
+        height: calc(2 * var(--border-radius) );
+        width: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+        box-shadow: 0 calc(-1 * var(--border-radius)) 0 0 var(--color--dark);
+        z-index: -1;
+    }
+
+    .header__tab::before {
         bottom: calc(-2 * var(--border-radius));
     }
 
-    .header::after {
+    .header__tab::after {
         top: 0;
         right: calc(-1 * var(--border-radius));
     }
