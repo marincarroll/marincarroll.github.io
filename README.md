@@ -20,6 +20,6 @@ CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
 - Audit all social share cards
 - Structured data
 - Setup TypeScript
-- check prettier, eslint?
+- ~~check prettier, eslint?~~
 - IDE highlighting fixes
 - Review wierd devices like apple watch?

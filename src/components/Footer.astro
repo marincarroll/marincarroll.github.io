@@ -26,11 +26,10 @@ import Icon from "./Icon.astro";
   .save-pdf {
     position: absolute;
     bottom: 0;
-    background: var(--color--dark);
+    background: var(--color-dark);
     border-top-left-radius: var(--border-radius);
     padding-block-start: calc(var(--border-radius) * 0.35);
     padding-inline-start: calc(var(--border-radius) * 0.35);
-    -webkit-user-select: none;
     user-select: none;
   }
 
@@ -42,7 +41,7 @@ import Icon from "./Icon.astro";
     height: calc(2 * var(--border-radius));
     width: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
-    box-shadow: 0 calc(1 * var(--border-radius)) 0 0 var(--color--dark);
+    box-shadow: 0 calc(1 * var(--border-radius)) 0 0 var(--color-dark);
     z-index: -1;
   }
 
@@ -60,7 +59,7 @@ import Icon from "./Icon.astro";
     cursor: pointer;
     background: none;
     border: none;
-    color: var(--color--light);
+    color: var(--color-light);
     padding-inline: 0.3em;
     padding-block: calc(0.25 * var(--border-radius));
     line-height: 1;
@@ -69,14 +68,14 @@ import Icon from "./Icon.astro";
     font-size: 1.3em;
     font-weight: 500;
     align-items: center;
-    font-family: var(--font-family--body);
+    font-family: var(--font-family-body);
     gap: 0.3em;
     letter-spacing: 0.05em;
   }
 
   .save-pdf__button:hover {
-    background-color: var(--color--light);
-    color: var(--color--dark);
+    background-color: var(--color-light);
+    color: var(--color-dark);
   }
 </style>
 <style is:global>
@@ -94,6 +93,7 @@ import Icon from "./Icon.astro";
     from {
       transform: translateY(0.05em);
     }
+
     to {
       transform: translateY(-0.08em);
     }

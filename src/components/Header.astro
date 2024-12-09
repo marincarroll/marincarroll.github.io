@@ -19,10 +19,10 @@ const { name } = basics;
     z-index: 1;
     pointer-events: none;
     border-radius: calc(var(--border-radius) * 2);
-    border: var(--border-width) solid var(--color--dark);
+    border: var(--border-width) solid var(--color-dark);
     box-shadow:
-      0 -99px 0 var(--color--dark),
-      0 0.23em 0 var(--color--dark);
+      0 -99px 0 var(--color-dark),
+      0 0.23em 0 var(--color-dark);
     font-size: min(16.5vw, 5em);
   }
 
@@ -31,7 +31,7 @@ const { name } = basics;
     align-items: flex-end;
     position: absolute;
     height: var(--header-height);
-    background: var(--color--dark);
+    background: var(--color-dark);
     border-bottom-right-radius: var(--border-radius);
     padding-right: 0.3em;
     z-index: 9999;
@@ -57,7 +57,7 @@ const { name } = basics;
     height: calc(2 * var(--border-radius));
     width: var(--border-radius);
     border-top-left-radius: var(--border-radius);
-    box-shadow: 0 calc(-1 * var(--border-radius)) 0 0 var(--color--dark);
+    box-shadow: 0 calc(-1 * var(--border-radius)) 0 0 var(--color-dark);
     z-index: -1;
   }
 
@@ -71,7 +71,7 @@ const { name } = basics;
   }
 
   .header__name {
-    font-family: var(--font-family--display);
+    font-family: var(--font-family-display);
     font-weight: 100;
     font-size: inherit;
     line-height: 1.2;

@@ -2,8 +2,9 @@
 import Education from "./Education.astro";
 import Work from "./Work.astro";
 import ResumeSection from "./ResumeSection.astro";
+// TODO: eslint parsing error only when negative percentage margins are used in
+//  x-intersect?
 ---
-
 <section
   class="resume"
   x-intersect:enter.margin.0.0.-100%="shrinkHeader = true"
@@ -21,8 +22,8 @@ import ResumeSection from "./ResumeSection.astro";
 </section>
 <style>
   .resume {
-    background-color: var(--color--light);
-    color: var(--color--dark);
+    background-color: var(--color-light);
+    color: var(--color-dark);
     border-radius: var(--border-radius);
     position: relative;
     display: flex;
@@ -31,12 +32,15 @@ import ResumeSection from "./ResumeSection.astro";
     padding: 3em 6vw 5em;
   }
 
+  /* TODO shouldn't this come with stylelint-config-html/astro? */
+  /* stylelint-disable selector-pseudo-class-no-unknown */
   :global(.resume ::selection) {
-    background-color: var(--color--dark);
-    color: var(--color--light);
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
 
   :global(.resume :is(h1, h2, h3, h4, h5, h6)) {
     margin-block: 2em 1em;
   }
+  /* stylelint-enable selector-pseudo-class-no-unknown */
 </style>
