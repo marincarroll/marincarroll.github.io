@@ -3,7 +3,11 @@ import Education from "./Education.astro";
 import Work from "./Work.astro";
 import ResumeSection from "./ResumeSection.astro";
 ---
-<section class="resume" x-intersect:margin.0.0.0.100px="open = true">
+<section
+    class="resume"
+    x-intersect:enter.margin.0.0.-100%="shrinkHeader = true"
+    x-intersect:leave.margin.0.0.-100%="shrinkHeader = false"
+>
     <ResumeSection title="Experience">
         <Work/>
     </ResumeSection>

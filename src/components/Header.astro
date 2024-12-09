@@ -3,16 +3,12 @@ import { basics } from "@cv";
 const { name } = basics;
 ---
 <header class="header">
-    <div class="header__tab">
-        <h1 class="header__name"  :class="{ 'test': open }">{name}</h1>
+    <div class="header__tab"  :class="{ 'is-shrunken': shrinkHeader }">
+        <h1 class="header__name">{name}</h1>
     </div>
 </header>
 
 <style>
-    .test {
-     //   background: greenyellow;
-    }
-
     .header {
         position: sticky;
         top: 0;
@@ -24,18 +20,24 @@ const { name } = basics;
         border-radius: calc( var(--border-radius) * 2);
         border: var(--border-width) solid var(--color--dark);
         box-shadow: 0 -99px 0 var(--color--dark), 0 13px 0 var(--color--dark);
+        font-size: 5rem;
     }
 
     .header__tab {
-        font-size: 5rem;
         display: inline-flex;
         align-items: flex-end;
+        position: absolute;
         height: var(--header-height);
         background: var(--color--dark);
         border-bottom-right-radius: var(--border-radius);
-        padding-right: 0.3em;
+        padding-right: 0.4em;
         padding-bottom: 0.1em;
-        position: relative;
+        transition: 0.4s font-size, 0.4s height;
+    }
+
+    .header__tab.is-shrunken {
+        font-size: 70%;
+        height: calc(0.7 * var(--header-height));
     }
 
     .header__tab::before,
