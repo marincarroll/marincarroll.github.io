@@ -11,7 +11,7 @@ CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
 
 ## TODO
 ### Tasks in order of priority
--[] Dark mode
+-[] Light mode
 -[] Browser review
 -[] Audit keyboard nav
 -[] Audit RTL
@@ -21,6 +21,8 @@ CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
 -[] Audit all social share cards
 -[] Structured data
 -[] Setup TypeScript
+-[] check prettier, eslint?
+-[] IDE highlighting fixes
 -[] Review wierd devices like apple watch?
 
 ### Features

@@ -5,7 +5,7 @@ const { summary, label, location } = basics;
 const { city, region } = location;
 ---
 <section class="profile">
-    <h2>{label}</h2>
+    <h2 class="profile__title">{label}</h2>
     <p>{city}, {region}</p>
     <p>{summary}</p>
     <ContactInfo/>
@@ -15,7 +15,11 @@ const { city, region } = location;
     .profile {
         position: sticky;
         top: 0;
-        padding-top: var(--header-height);
+        padding-top: calc( var(--header-height) + ( 1.5* var(--border-radius) ));
         padding-bottom: 4em;
+    }
+
+    .profile__title {
+        margin-block: 0 0.5em;
     }
 </style>
