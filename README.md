@@ -13,7 +13,6 @@
 ## TODO
 
 ### Pre-Launch
-
 - add actual data
 - print mode
 - favicons

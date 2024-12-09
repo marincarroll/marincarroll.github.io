@@ -1,0 +1,41 @@
+---
+import { basics } from "@cv";
+const { summary, url, name, label } = basics;
+const { title } = Astro.props; // TODO
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{name} / {label}</title>
+  <meta name="description" content={summary} />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Jacquard+12&family=Jacquard+12"
+    rel="stylesheet"
+  />
+  <meta property="og:url" content={url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={summary} />
+  <meta property="og:image" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
+  <meta property="twitter:url" content={url} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={summary} />
+  <meta name="twitter:image" content="" />
+  <script
+    defer
+    is:inline
+    src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+  ></script>
+</head>
+<body>
+  <slot/>
+</body>
+</html>
