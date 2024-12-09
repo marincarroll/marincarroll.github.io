@@ -3,7 +3,7 @@ import { basics } from "@cv";
 const { name } = basics;
 ---
 <header class="header">
-    <div class="header__tab"  :class="{ 'is-shrunken': shrinkHeader }">
+    <div class="header__tab" :class="{ 'is-shrunken': shrinkHeader }">
         <h1 class="header__name">{name}</h1>
     </div>
 </header>
@@ -31,9 +31,15 @@ const { name } = basics;
         background: var(--color--dark);
         border-bottom-right-radius: var(--border-radius);
         padding-right: 0.3em;
-        transition-duration: 0.4s;
-        transition-property: height, font-size;
         z-index: 9999;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+
+        .header__tab {
+            transition-duration: 0.4s;
+            transition-property: height, font-size;
+        }
     }
 
     .header__tab.is-shrunken {

@@ -4,7 +4,7 @@ import PDFIcon from "../icons/pdf.astro";
 ---
 <footer class="footer">
     <div class="save-pdf">
-        <button onclick="console.log('test')" class="save-pdf__button">
+        <button onclick="window.print()" class="save-pdf__button">
         <span class="save-pdf__icon">
             <PDFIcon/>
         </span>
@@ -72,8 +72,26 @@ import PDFIcon from "../icons/pdf.astro";
         letter-spacing: 0.05em;
     }
 
+    .save-pdf__button:hover {
+        background-color: var(--color--light);
+        color: var(--color--dark);
+    }
+
     .save-pdf__icon {
         width: 1.3em;
         margin-top: 0.16em;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+
+        .save-pdf__button:hover .save-pdf__icon {
+            animation: bounce 0.4s ease infinite alternate;
+        }
+    }
+
+    @keyframes bounce {
+        to {
+            transform: translateY(-0.14em);
+        }
     }
 </style>
