@@ -5,12 +5,12 @@ import DateRange from "./DateRange.astro";
 
 <ul>
   {
-    education.map(({ institution, startDate, endDate, area }) => {
+    education.map(({ institution, startDate, endDate, degree }) => {
       return (
         <li>
           <h4>{institution}</h4>
-          <div>{area}</div>
           <DateRange start={startDate} end={endDate} />
+          <p>{degree}</p>
         </li>
       );
     })

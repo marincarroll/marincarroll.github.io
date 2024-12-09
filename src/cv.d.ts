@@ -2,14 +2,11 @@ export interface CV {
   basics: Basics;
   work: Array<Work>;
   education: Array<Education>;
-  awards: Array<Awards>;
-  skills: Array<Skills>;
 }
 
 interface Basics {
   name: string;
   label: string;
-  image: string;
   email: string;
   phone: string;
   url: string;
@@ -19,62 +16,28 @@ interface Basics {
 }
 
 interface Location {
-  address: string;
-  postalCode: string;
   city: string;
-  countryCode: string;
   region: string;
 }
 
 interface Profiles {
   network: string;
-  username: string;
   url: string;
 }
 
 interface Work {
   name: string;
   position: string;
-  url: string;
-  startDate: DateStr;
-  endDate: DateStr | null;
   summary: string;
-  highlights: Highlight;
-}
-
-type DateStr = `${string}-${string}-${string}`;
-
-interface Skills {
-  name: string;
-  level: string;
-  keywords: Array<string>;
-}
-
-interface Awards {
-  title: string;
-  date: string;
-  awarder: string;
-  summary: string;
+  startDate: number;
+  endDate: number | undefined;
+  technologies: Array<string>;
 }
 
 interface Education {
   institution: string;
-  url: string;
-  area: string;
-  studyType: string;
-  startDate: DateStr;
-  endDate: DateStr;
-  score: string;
-  courses: Array<string>;
+  degree: string;
+  summary: string;
+  startDate: number;
+  endDate: number | undefined;
 }
-
-interface Projects {
-  name: string;
-  isActive: boolean;
-  description: string;
-  highlights: Highlight;
-  url: string;
-  github?: string;
-}
-
-type Highlight = Array<String>;
