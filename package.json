@@ -6,7 +6,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "prettier": "npx prettier . --write",
-    "eslint": "eslint \"src/**/*.{js,astro}\"",
+    "eslint": "eslint \"src/**/*.{js,astro}\" --fix",
     "stylelint": "npx stylelint \"**/*.astro\" --fix",
     "preview": "astro preview",
     "astro": "astro"
