@@ -14,12 +14,11 @@
   "scripts": {
     "start": "astro dev",
     "build": "astro check && astro build && npm run prettier && npm run stylelint && npm run eslint",
-    "prettier": "npx prettier . --write",
-    "eslint": "eslint \"src/**/*.{js,astro}\" --fix",
-    "stylelint": "npx stylelint \"**/*.astro\" --fix",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "prettier": "npx prettier . --write",
+    "eslint": "eslint \"src/**/*.{js,astro}\" --fix",
+    "stylelint": "npx stylelint \"**/*.astro\" --fix"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
