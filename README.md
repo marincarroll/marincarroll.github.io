@@ -10,22 +10,17 @@ CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
 
 
 ## TODO
-### Tasks in order of priority
--[] Light mode
--[] Browser review
--[] Audit keyboard nav
--[] Audit RTL
--[] Audit VoiceOver
--[] SEO
--[] PageSpeed Insights
--[] Audit all social share cards
--[] Structured data
--[] Setup TypeScript
--[] check prettier, eslint?
--[] IDE highlighting fixes
--[] Review wierd devices like apple watch?
-
-### Features
-- Explore possibility of custom-yet-not-annoying scrollbars? If such a thing exists
-- ^^ but for cursors
-
+- favicons
+- Browser review
+- Audit keyboard nav
+- Audit RTL
+- Audit VoiceOver
+- SEO
+- PageSpeed Insights
+- Light mode
+- Audit all social share cards
+- Structured data
+- Setup TypeScript
+- check prettier, eslint?
+- IDE highlighting fixes
+- Review wierd devices like apple watch?
