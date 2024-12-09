@@ -15,7 +15,7 @@
 ### Pre-Launch
 
 - add actual data
-- create PDF
+- print mode
 - favicons
 - Browser review
 - Audit all social share cards

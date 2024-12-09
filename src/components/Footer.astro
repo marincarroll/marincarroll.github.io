@@ -1,5 +1,5 @@
 ---
-import Icon from "./Icon.astro";
+import PDFIcon from "@/icons/PDF.astro";
 ---
 
 <footer class="footer">
@@ -10,7 +10,8 @@ import Icon from "./Icon.astro";
       onclick="window.print()"
       class="save-pdf__button"
     >
-      <Icon icon="PDF" /><span class="aria-hidden">PDF</span>
+      <span class="aria-hidden"><PDFIcon /></span>
+      <span class="aria-hidden">PDF</span>
     </button>
   </div>
 </footer>
@@ -79,12 +80,13 @@ import Icon from "./Icon.astro";
   }
 </style>
 <style is:global>
-  .save-pdf .icon {
+  .save-pdf svg {
+    display: block;
     width: 1.3em;
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .save-pdf__button:hover .icon {
+    .save-pdf__button:hover svg {
       animation: bounce 0.4s ease infinite alternate;
     }
   }

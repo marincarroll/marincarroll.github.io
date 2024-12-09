@@ -15,10 +15,12 @@ import DateRange from "./DateRange.astro";
             </header>
             {summary && <p>{summary}</p>}
             {technologies && (
-              <h5>Tech stack</h5>
-              <p>
-                {technologies.join(', ')}
-              </p>
+              <>
+                  <h5>Tech stack</h5>
+                  <p>
+                    {technologies.join(', ')}
+                  </p>
+                </>
             )}
           </li>
         );

@@ -1,6 +1,18 @@
 ---
-import Icon from "./Icon.astro";
 const { url, icon, title } = Astro.props;
+
+import Mail from "@/icons/Mail.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import GitHub from "@/icons/GitHub.astro";
+import type { Icon } from "@/types";
+
+const ICON_OPTIONS: Icon = {
+  Mail,
+  GitHub,
+  LinkedIn,
+};
+
+const SVG = ICON_OPTIONS[icon];
 ---
 
 <a
@@ -9,7 +21,7 @@ const { url, icon, title } = Astro.props;
   target="_blank"
   rel="noopener noreferrer"
 >
-  <Icon icon={icon} />
+  <span aria-hidden="true"><SVG /></span>
   <span class="screen-reader-text">{title}</span>
 </a>
 <style>
@@ -25,5 +37,9 @@ const { url, icon, title } = Astro.props;
   .contact-info__link:hover {
     background-color: var(--color-light);
     color: var(--color-dark);
+  }
+
+  :global(.contact-info__link svg) {
+    display: block;
   }
 </style>
