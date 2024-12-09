@@ -7,7 +7,7 @@ import { basics } from "@cv";
 import Resume from "../components/Resume.astro";
 import Surprise from "../components/Surprise.astro";
 const { summary, url  } = basics;
-const { title, pageName } = Astro.props; // TODO
+const { title } = Astro.props; // TODO
 
 ---
 <!doctype html>
@@ -32,7 +32,6 @@ const { title, pageName } = Astro.props; // TODO
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={summary} />
 	<meta name="twitter:image" content="" />
-	<link rel="stylesheet" href="/themes/themes.css" />
 	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
