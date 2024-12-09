@@ -1,7 +1,16 @@
 {
   "name": "marin-resume",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marincarroll/resume.git"
+  },
   "scripts": {
     "start": "astro dev",
     "build": "astro check && astro build",
