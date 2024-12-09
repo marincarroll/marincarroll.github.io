@@ -30,7 +30,7 @@
 - PageSpeed Insights
 - Light mode
 - SEO
-- More robust TypeScript explorations
+- More robust TypeScript explorations?
 - Structured data
 - IDE highlighting fixes
 - Review wierd devices like apple watch?

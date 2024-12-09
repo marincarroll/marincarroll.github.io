@@ -10,17 +10,19 @@ import DateRange from "./DateRange.astro";
         return (
           <li>
             <header>
-              <h4>{position}<span aria-hidden="true"> / </span>{name}</h4>
+              <h4>
+                {position}
+                <span aria-hidden="true"> / </span>
+                {name}
+              </h4>
               <DateRange start={startDate} end={endDate} />
             </header>
             {summary && <p>{summary}</p>}
             {technologies && (
               <>
-                  <h5>Tech stack</h5>
-                  <p>
-                    {technologies.join(', ')}
-                  </p>
-                </>
+                <h5>Tech stack</h5>
+                <p>{technologies.join(", ")}</p>
+              </>
             )}
           </li>
         );

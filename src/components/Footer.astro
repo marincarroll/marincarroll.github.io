@@ -4,15 +4,16 @@ import PDFIcon from "@/icons/PDF.astro";
 
 <footer class="footer">
   <div class="save-pdf">
-    <button
+    <a
       title="Download PDF"
       aria-label="Download PDF"
-      onclick="window.print()"
-      class="save-pdf__button"
+      href="../../dist/MarinCarroll-Resume.pdf"
+      class="save-pdf__link"
+      target="_blank"
     >
       <span class="aria-hidden"><PDFIcon /></span>
       <span class="aria-hidden">PDF</span>
-    </button>
+    </a>
   </div>
 </footer>
 <style>
@@ -56,25 +57,21 @@ import PDFIcon from "@/icons/PDF.astro";
     left: calc(-1 * var(--border-radius));
   }
 
-  .save-pdf__button {
-    cursor: pointer;
-    background: none;
-    border: none;
+  .save-pdf__link {
+    text-decoration: none;
     color: var(--color-light);
     padding-inline: 0.3em;
     padding-block: calc(0.25 * var(--border-radius));
-    line-height: 1;
     border-radius: calc(var(--border-radius) * 0.45);
     display: flex;
     font-size: 1.3em;
     font-weight: 500;
     align-items: center;
-    font-family: var(--font-family-body);
     gap: 0.3em;
     letter-spacing: 0.05em;
   }
 
-  .save-pdf__button:hover {
+  .save-pdf__link:hover {
     background-color: var(--color-light);
     color: var(--color-dark);
   }
@@ -86,7 +83,7 @@ import PDFIcon from "@/icons/PDF.astro";
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    .save-pdf__button:hover svg {
+    .save-pdf__link:hover svg {
       animation: bounce 0.4s ease infinite alternate;
     }
   }
