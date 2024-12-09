@@ -55,9 +55,9 @@ const { title } = Astro.props; // TODO
 		--font-family--body: "DM Mono", monospace;
 		--font-family--display: "Jacquard 12", system-ui;
 		--content-width: 800px;
-		--border-width: 25px;
-		--header-height: 8rem;
-		--border-radius: 2rem;
+		--border-width: min(4vw, 25px);
+		--border-radius: min(6.7vw, 2rem);
+		--header-height: min(28vw, 8rem);
 	}
 
 	* {
@@ -83,7 +83,7 @@ const { title } = Astro.props; // TODO
 		font-family: var(--font-family--body);
 		background: var(--color--dark);
 		color: var(--color--light);
-
+		font-size: min(3.7vw, 1rem);
 		-webkit-font-smoothing: antialiased;
 	}
 
