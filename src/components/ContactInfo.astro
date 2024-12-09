@@ -12,34 +12,62 @@ const SOCIAL_ICONS: SocialIcon = {
 };
 const { profiles, phone, email } = basics;
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
-const linkedUrl = linkedInfo?.url;
-
-const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 ---
 <section class="contact-info">
-    <div class="print">
-        {printInfo}
-    </div>
-    <div class="no-print">
-        {
-            email && (
-                        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
-                            <Mail /> Email me
-                        </a>
-            )
-        }
-        {
-            profiles.map(({ network, url }) => {
-                const Icon = SOCIAL_ICONS[network];
+     {
+        email && (
+            <a
+                class="contact-info__link"
+                href={`mailto:${email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Mail /> Email me
+            </a>
+        )
+    }
+    {
+        profiles.map(({ network, url }) => {
+            const Icon = SOCIAL_ICONS[network];
 
-                return (
-                        <a href={url} target="_blank" rel="noopener noreferrer">
-                            <Icon />
-                            {network}
-                        </a>
-                );
-            })
-        }
-    </div>
+            return (
+                <a
+                    class="contact-info__link"
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Icon />
+                    {network}
+                </a>
+            );
+        })
+    }
 </section>
+<style>
+    .contact-info {
+        display: flex;
+        margin-block-start: 3rem;
+        gap: 0.6em;
+        z-index: 100;
+    }
+
+    .contact-info__link {
+        font-size: 0;
+        display: block;
+        width: 2.7rem;
+        padding: 0.3rem;
+        aspect-ratio: 1;
+        margin: 3px;
+        border-radius: 0.4rem;
+        transition: 0.2s transform;
+    }
+
+    .contact-info__link:hover {
+        transform: translateY(-0.3rem);
+    }
+
+    :global(.contact-info__link svg) {
+        height: auto;
+        width: 100%;
+    }
+</style>
