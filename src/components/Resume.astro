@@ -3,39 +3,40 @@ import Education from "./Education.astro";
 import Work from "./Work.astro";
 import ResumeSection from "./ResumeSection.astro";
 ---
+
 <section
-    class="resume"
-    x-intersect:enter.margin.0.0.-100%="shrinkHeader = true"
-    x-intersect:leave.margin.0.0.-100%="shrinkHeader = false"
+  class="resume"
+  x-intersect:enter.margin.0.0.-100%="shrinkHeader = true"
+  x-intersect:leave.margin.0.0.-100%="shrinkHeader = false"
 >
-    <ResumeSection title="Experience">
-        <Work/>
-    </ResumeSection>
-    <ResumeSection title="Education">
-        <Education/>
-    </ResumeSection>
-    <ResumeSection title="Professional Interests">
-        ty for visiting
-    </ResumeSection>
+  <ResumeSection title="Experience">
+    <Work />
+  </ResumeSection>
+  <ResumeSection title="Education">
+    <Education />
+  </ResumeSection>
+  <ResumeSection title="Professional Interests">
+    ty for visiting
+  </ResumeSection>
 </section>
 <style>
-    .resume {
-        background-color: var(--color--light);
-        color: var(--color--dark);
-        border-radius: var(--border-radius);
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 4em;
-        padding: 3em 6vw 5em;
-    }
+  .resume {
+    background-color: var(--color--light);
+    color: var(--color--dark);
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 3em 6vw 5em;
+  }
 
-    :global(.resume ::selection ) {
-        background-color: var(--color--dark);
-        color: var(--color--light);
-    }
+  :global(.resume ::selection) {
+    background-color: var(--color--dark);
+    color: var(--color--light);
+  }
 
-    :global(.resume :is(h1, h2, h3, h4, h5, h6)) {
-        margin-block: 2em 1em;
-    }
+  :global(.resume :is(h1, h2, h3, h4, h5, h6)) {
+    margin-block: 2em 1em;
+  }
 </style>

@@ -2,27 +2,28 @@
 import Icon from "./Icon.astro";
 const { url, icon, title } = Astro.props;
 ---
+
 <a
-    class="contact-info__link"
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
+  class="contact-info__link"
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
 >
-    <Icon icon={icon} />
-    <span class="screen-reader-text">{title}</span>
+  <Icon icon={icon} />
+  <span class="screen-reader-text">{title}</span>
 </a>
 <style>
-    .contact-info__link {
-        display: block;
-        width: 2.7rem;
-        padding: 0.3rem;
-        aspect-ratio: 1;
-        margin: 3px;
-        border-radius: 0.4rem;
-    }
+  .contact-info__link {
+    display: block;
+    width: 2.7rem;
+    padding: 0.3rem;
+    aspect-ratio: 1;
+    margin: 3px;
+    border-radius: 0.4rem;
+  }
 
-    .contact-info__link:hover {
-        background-color: var(--color--light);
-        color: var(--color--dark);
-    }
+  .contact-info__link:hover {
+    background-color: var(--color--light);
+    color: var(--color--dark);
+  }
 </style>

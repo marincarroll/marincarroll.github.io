@@ -8,22 +8,24 @@ import PDF from "@/icons/PDF.astro";
 import type { SocialIcon } from "@/types";
 
 const ICON_OPTIONS: SocialIcon = {
-    Mail,
-    GitHub,
-    LinkedIn,
-    PDF
+  Mail,
+  GitHub,
+  LinkedIn,
+  PDF,
 };
 
-const SVG = ICON_OPTIONS[ icon ];
-
+const SVG = ICON_OPTIONS[icon];
 ---
-{ SVG &&
+
+{
+  SVG && (
     <span class="icon" aria-hidden="true">
-        <SVG/>
+      <SVG />
     </span>
+  )
 }
 <style is:global>
-    .icon svg {
-        display: block;
-    }
+  .icon svg {
+    display: block;
+  }
 </style>

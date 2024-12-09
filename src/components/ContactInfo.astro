@@ -3,33 +3,25 @@ import { basics } from "@cv";
 import Icon from "./Icon.astro";
 import ContactLink from "./ContactLink.astro";
 const { profiles, email } = basics;
-
 ---
+
 <section class="contact-info">
-     {
-        email && (
-            <ContactLink
-                url={`mailto:${email}`}
-                title="Email me"
-                icon="Mail"
-            />
-        )
-    }
-    {
-        profiles.map(({ network, url }) => (
-            <ContactLink
-                url={url}
-                title={network}
-                icon={network}
-            />
-        ) )
-    }
+  {
+    email && (
+      <ContactLink url={`mailto:${email}`} title="Email me" icon="Mail" />
+    )
+  }
+  {
+    profiles.map(({ network, url }) => (
+      <ContactLink url={url} title={network} icon={network} />
+    ))
+  }
 </section>
 <style>
-    .contact-info {
-        display: flex;
-        margin-block-start: 3rem;
-        gap: 0.6em;
-        z-index: 100;
-    }
+  .contact-info {
+    display: flex;
+    margin-block-start: 3rem;
+    gap: 0.6em;
+    z-index: 100;
+  }
 </style>

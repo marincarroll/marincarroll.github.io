@@ -6,121 +6,127 @@ import Profile from "../components/Profile.astro";
 import { basics } from "@cv";
 import Resume from "../components/Resume.astro";
 import Surprise from "../components/Surprise.astro";
-const { summary, url, name, label  } = basics;
+const { summary, url, name, label } = basics;
 const { title } = Astro.props; // TODO
-
 ---
+
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>{name} / {label}</title>
-	<meta name="description" content={summary} />
-	<meta name="viewport" content="width=device-width" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Jacquard+12&family=Jacquard+12" rel="stylesheet">
-	<meta property="og:url" content={url} />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={summary} />
-	<meta property="og:image" content="" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
-	<meta property="twitter:url" content={url} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={summary} />
-	<meta name="twitter:image" content="" />
-	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
-</head>
-<body>
-	<div class="body__wrapper" x-data="{ shrinkHeader: false }">
-		<Header/>
-		<main>
-			<Profile/>
-			<Resume/>
-		</main>
-		<Footer/>
-	</div>
-	<Surprise/>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{name} / {label}</title>
+    <meta name="description" content={summary} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Jacquard+12&family=Jacquard+12"
+      rel="stylesheet"
+    />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={summary} />
+    <meta property="og:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
+    <meta property="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={summary} />
+    <meta name="twitter:image" content="" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="body__wrapper" x-data="{ shrinkHeader: false }">
+      <Header />
+      <main>
+        <Profile />
+        <Resume />
+      </main>
+      <Footer />
+    </div>
+    <Surprise />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--color--light: rgb(255, 191, 203);
-		--color--dark: rgb(3, 1, 3);
-		--color--foreground: var(--color--light);
-		--color--background: var(--color--dark);
-		--font-family--body: "DM Mono", monospace;
-		--font-family--display: "Jacquard 12", system-ui;
-		--content-width: 800px;
-		--border-width: min(4vw, 25px);
-		--border-radius: min(6.7vw, 2rem);
-		--header-height: min(28vw, 8rem);
-	}
+  :root {
+    --color--light: rgb(255, 191, 203);
+    --color--dark: rgb(3, 1, 3);
+    --color--foreground: var(--color--light);
+    --color--background: var(--color--dark);
+    --font-family--body: "DM Mono", monospace;
+    --font-family--display: "Jacquard 12", system-ui;
+    --content-width: 800px;
+    --border-width: min(4vw, 25px);
+    --border-radius: min(6.7vw, 2rem);
+    --header-height: min(28vw, 8rem);
+  }
 
-	* {
-		box-sizing: border-box;
-	}
+  * {
+    box-sizing: border-box;
+  }
 
-	::selection {
-		background-color: var(--color--light);
-		color: var(--color--dark);
-	}
+  ::selection {
+    background-color: var(--color--light);
+    color: var(--color--dark);
+  }
 
-	a {
-		color: currentColor;
-	}
+  a {
+    color: currentColor;
+  }
 
-	:focus-visible {
-		outline: 2px currentColor dashed;
-	}
+  :focus-visible {
+    outline: 2px currentColor dashed;
+  }
 
-	body {
-		margin: 0;
-		font-style: normal;
-		font-family: var(--font-family--body);
-		background: var(--color--dark);
-		color: var(--color--light);
-		font-size: min(3.7vw, 1rem);
-		-webkit-font-smoothing: antialiased;
-	}
+  body {
+    margin: 0;
+    font-style: normal;
+    font-family: var(--font-family--body);
+    background: var(--color--dark);
+    color: var(--color--light);
+    font-size: min(3.7vw, 1rem);
+    -webkit-font-smoothing: antialiased;
+  }
 
-	.body__wrapper {
-		max-width: var(--content-width);
-		margin-inline: auto;
-		padding: 0 var(--border-width) var(--border-width);
-	}
+  .body__wrapper {
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding: 0 var(--border-width) var(--border-width);
+  }
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-	.print {
-		display: none !important;
-	}
+  .print {
+    display: none !important;
+  }
 
-	@page {
-		size: auto;
-		margin: 0;
-	}
+  @page {
+    size: auto;
+    margin: 0;
+  }
 
-	@media print {
-		.no-print {
-			display: none !important;
-		}
+  @media print {
+    .no-print {
+      display: none !important;
+    }
 
-		.print {
-			display: block !important;
-		}
-	}
+    .print {
+      display: block !important;
+    }
+  }
 
-	.screen-reader-text {
-		clip: rect(1px, 1px, 1px, 1px);
-		position: absolute;
-		height: 1px;
-	}
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    height: 1px;
+  }
 </style>

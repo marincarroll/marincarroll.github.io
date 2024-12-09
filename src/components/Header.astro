@@ -2,78 +2,79 @@
 import { basics } from "@cv";
 const { name } = basics;
 ---
+
 <header class="header">
-    <div class="header__tab" :class="{ 'is-shrunken': shrinkHeader }">
-        <h1 class="header__name">{name}</h1>
-    </div>
+  <div class="header__tab" :class="{ 'is-shrunken': shrinkHeader }">
+    <h1 class="header__name">{name}</h1>
+  </div>
 </header>
 
 <style>
-    .header {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        margin-bottom: -100vh;
-        margin-inline: calc(-1* var(--border-width));
-        z-index: 1;
-        pointer-events: none;
-        border-radius: calc( var(--border-radius) * 2);
-        border: var(--border-width) solid var(--color--dark);
-        box-shadow: 0 -99px 0 var(--color--dark), 0 0.23em 0 var(--color--dark);
-        font-size: min(16.5vw, 5em);
-    }
+  .header {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    margin-bottom: -100vh;
+    margin-inline: calc(-1 * var(--border-width));
+    z-index: 1;
+    pointer-events: none;
+    border-radius: calc(var(--border-radius) * 2);
+    border: var(--border-width) solid var(--color--dark);
+    box-shadow:
+      0 -99px 0 var(--color--dark),
+      0 0.23em 0 var(--color--dark);
+    font-size: min(16.5vw, 5em);
+  }
 
+  .header__tab {
+    display: inline-flex;
+    align-items: flex-end;
+    position: absolute;
+    height: var(--header-height);
+    background: var(--color--dark);
+    border-bottom-right-radius: var(--border-radius);
+    padding-right: 0.3em;
+    z-index: 9999;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
     .header__tab {
-        display: inline-flex;
-        align-items: flex-end;
-        position: absolute;
-        height: var(--header-height);
-        background: var(--color--dark);
-        border-bottom-right-radius: var(--border-radius);
-        padding-right: 0.3em;
-        z-index: 9999;
+      transition-duration: 0.4s;
+      transition-property: height, font-size;
     }
+  }
 
-    @media (prefers-reduced-motion: no-preference) {
+  .header__tab.is-shrunken {
+    font-size: 70%;
+    height: 1em;
+  }
 
-        .header__tab {
-            transition-duration: 0.4s;
-            transition-property: height, font-size;
-        }
-    }
+  .header__tab::before,
+  .header__tab::after {
+    content: "";
+    position: absolute;
+    background: transparent;
+    height: calc(2 * var(--border-radius));
+    width: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+    box-shadow: 0 calc(-1 * var(--border-radius)) 0 0 var(--color--dark);
+    z-index: -1;
+  }
 
-    .header__tab.is-shrunken {
-        font-size: 70%;
-        height: 1em;
-    }
+  .header__tab::before {
+    bottom: calc(-2 * var(--border-radius));
+  }
 
-    .header__tab::before,
-    .header__tab::after {
-        content: "";
-        position: absolute;
-        background: transparent;
-        height: calc(2 * var(--border-radius) );
-        width: var(--border-radius);
-        border-top-left-radius: var(--border-radius);
-        box-shadow: 0 calc(-1 * var(--border-radius)) 0 0 var(--color--dark);
-        z-index: -1;
-    }
+  .header__tab::after {
+    top: 0;
+    right: calc(-1 * var(--border-radius));
+  }
 
-    .header__tab::before {
-        bottom: calc(-2 * var(--border-radius));
-    }
-
-    .header__tab::after {
-        top: 0;
-        right: calc(-1 * var(--border-radius));
-    }
-
-    .header__name {
-        font-family: var(--font-family--display);
-        font-weight: 100;
-        font-size: inherit;
-        line-height: 1.2;
-        margin: 0;
-    }
-
+  .header__name {
+    font-family: var(--font-family--display);
+    font-weight: 100;
+    font-size: inherit;
+    line-height: 1.2;
+    margin: 0;
+  }
 </style>

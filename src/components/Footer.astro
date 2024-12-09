@@ -1,101 +1,101 @@
 ---
 import Icon from "./Icon.astro";
 ---
+
 <footer class="footer">
-    <div class="save-pdf">
-        <button
-            title="Download PDF"
-            aria-label="Download PDF"
-            onclick="window.print()"
-            class="save-pdf__button"
-        >
-            <Icon icon="PDF"/><span class="aria-hidden">PDF</span>
-        </button>
-    </div>
+  <div class="save-pdf">
+    <button
+      title="Download PDF"
+      aria-label="Download PDF"
+      onclick="window.print()"
+      class="save-pdf__button"
+    >
+      <Icon icon="PDF" /><span class="aria-hidden">PDF</span>
+    </button>
+  </div>
 </footer>
 <style>
-    .footer {
-        position: sticky;
-        bottom: var(--border-width);
-        display: flex;
-        justify-content: flex-end;
-        z-index: 1;
-    }
+  .footer {
+    position: sticky;
+    bottom: var(--border-width);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+  }
 
-    .save-pdf {
-        position: absolute;
-        bottom: 0;
-        background: var(--color--dark);
-        border-top-left-radius: var(--border-radius);
-        padding-block-start: calc( var(--border-radius) * 0.35);
-        padding-inline-start: calc( var(--border-radius) * 0.35);
-        -webkit-user-select: none;
-        user-select: none;
-    }
+  .save-pdf {
+    position: absolute;
+    bottom: 0;
+    background: var(--color--dark);
+    border-top-left-radius: var(--border-radius);
+    padding-block-start: calc(var(--border-radius) * 0.35);
+    padding-inline-start: calc(var(--border-radius) * 0.35);
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
-    .save-pdf::before,
-    .save-pdf::after {
-        content: "";
-        position: absolute;
-        background: transparent;
-        height: calc(2 * var(--border-radius));
-        width: var(--border-radius);
-        border-bottom-right-radius: var(--border-radius);
-        box-shadow: 0 calc(1 * var(--border-radius)) 0 0 var(--color--dark);
-        z-index: -1;
-    }
+  .save-pdf::before,
+  .save-pdf::after {
+    content: "";
+    position: absolute;
+    background: transparent;
+    height: calc(2 * var(--border-radius));
+    width: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    box-shadow: 0 calc(1 * var(--border-radius)) 0 0 var(--color--dark);
+    z-index: -1;
+  }
 
-    .save-pdf::before {
-        top: calc(-2 * var(--border-radius));
-        right: 0;
-    }
+  .save-pdf::before {
+    top: calc(-2 * var(--border-radius));
+    right: 0;
+  }
 
-    .save-pdf::after {
-        bottom: 0;
-        left: calc(-1 * var(--border-radius));
-    }
+  .save-pdf::after {
+    bottom: 0;
+    left: calc(-1 * var(--border-radius));
+  }
 
-    .save-pdf__button {
-        cursor: pointer;
-        background: none;
-        border: none;
-        color: var(--color--light);
-        padding-inline: 0.3em;
-        padding-block: calc(0.25 * var(--border-radius));
-        line-height: 1;
-        border-radius: calc(var(--border-radius) * 0.45);
-        display: flex;
-        font-size: 1.3em;
-        font-weight: 500;
-        align-items: center;
-        font-family: var(--font-family--body);
-        gap: 0.3em;
-        letter-spacing: 0.05em;
-    }
+  .save-pdf__button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--color--light);
+    padding-inline: 0.3em;
+    padding-block: calc(0.25 * var(--border-radius));
+    line-height: 1;
+    border-radius: calc(var(--border-radius) * 0.45);
+    display: flex;
+    font-size: 1.3em;
+    font-weight: 500;
+    align-items: center;
+    font-family: var(--font-family--body);
+    gap: 0.3em;
+    letter-spacing: 0.05em;
+  }
 
-    .save-pdf__button:hover {
-        background-color: var(--color--light);
-        color: var(--color--dark);
-    }
+  .save-pdf__button:hover {
+    background-color: var(--color--light);
+    color: var(--color--dark);
+  }
 </style>
 <style is:global>
-    .save-pdf .icon {
-        width: 1.3em;
-    }
+  .save-pdf .icon {
+    width: 1.3em;
+  }
 
-    @media (prefers-reduced-motion: no-preference) {
-
-        .save-pdf__button:hover .icon {
-            animation: bounce 0.4s ease infinite alternate;
-        }
+  @media (prefers-reduced-motion: no-preference) {
+    .save-pdf__button:hover .icon {
+      animation: bounce 0.4s ease infinite alternate;
     }
+  }
 
-    @keyframes bounce {
-        from {
-            transform: translateY(0.05em);
-        }
-        to {
-            transform: translateY(-0.08em);
-        }
+  @keyframes bounce {
+    from {
+      transform: translateY(0.05em);
     }
+    to {
+      transform: translateY(-0.08em);
+    }
+  }
 </style>

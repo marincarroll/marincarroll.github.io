@@ -2,9 +2,10 @@
 const { start, end } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
+
 <span>
-    <time datetime={start}>{start}</time>
-    <span aria-hidden="true">&ndash;</span>
-    <span class="screen-reader-text">to</span>
-    <time datetime={end || currentYear}>{end || 'Present'}</time>
+  <time datetime={start}>{start}</time>
+  <span aria-hidden="true">&ndash;</span>
+  <span class="screen-reader-text">to</span>
+  <time datetime={end || currentYear}>{end || "Present"}</time>
 </span>

@@ -1,64 +1,64 @@
 ---
-import {work} from "@cv"
+import { work } from "@cv";
 import DateRange from "./DateRange.astro";
-
 ---
+
 <ul>
-    {work.map(
-        ({
-             name,
-             startDate,
-             endDate,
-             position,
-             summary,
-             responsibilities,
-             achievements,
-             skills,
-        }) => {
+  {
+    work.map(
+      ({
+        name,
+        startDate,
+        endDate,
+        position,
+        summary,
+        responsibilities,
+        achievements,
+        skills,
+      }) => {
+        return (
+          <li>
+            <header>
+              <DateRange start={startDate} end={endDate} />
+            </header>
+            <h3>
+              {position} {name}
+            </h3>
+            <div>
+              {summary && (
+                <ul>
+                  {Array.isArray(summary) ? (
+                    summary.map((item) => ({ item }))
+                  ) : (
+                    <li>{summary}</li>
+                  )}
+                </ul>
+              )}
 
-            return (
-                <li>
-                    <header>
-                        <DateRange start={startDate} end={endDate} />
-                    </header>
-                    <h3>{position} {name}</h3>
-                    <div>
-                        {summary && (
-                            <ul>
-                                {Array.isArray(summary) ? (
-                                    summary.map(item => (
-                                        {item}
-                                    ))
-                                ) : (
-                                        <li>{summary}</li>
-                                )}
-                            </ul>
-                        )}
+              {responsibilities && (
+                <div>
+                  <h4>Responsibilities:</h4>
+                  <ul>
+                    {responsibilities.map((responsibility) => (
+                      <li>{responsibility}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
-                        {responsibilities && (
-                            <div>
-                                <h4>Responsibilities:</h4>
-                                <ul>
-                                    {responsibilities.map(responsibility => (
-                                            <li>{responsibility}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
+              {achievements && (
+                <div>
+                  <h4>Achievements:</h4>
+                  <ul>
+                    {achievements.map((achievement) => (
+                      <li>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
 
-                        {achievements && (
-                            <div>
-                                <h4>Achievements:</h4>
-                                <ul>
-                                    {achievements.map(achievement => (
-                                            <li>{achievement}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
-                    </div>
-
-                {/*<ul aria-label="Technologies used">
+            {/*<ul aria-label="Technologies used">
                         {skills && skills.map(skill => {
                             return (
                                     <li class="flex gap-1 border-solid px-2 py-0.5 text-xs">
@@ -67,8 +67,9 @@ import DateRange from "./DateRange.astro";
                             )
                         })}
                     </ul>*/}
-                </li>
-            )
-        })
-    }
+          </li>
+        );
+      },
+    )
+  }
 </ul>
