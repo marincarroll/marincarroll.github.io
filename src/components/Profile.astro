@@ -5,7 +5,7 @@ const { summary, label, location } = basics;
 const { city, region } = location;
 ---
 <section class="profile">
-    <h2 class="profile__title">{label} / {city}, {region}</h2>
+    <h2 class="profile__title">{label} <span aria-hidden="true">/</span> {city}, {region}</h2>
     <p class="profile__summary">{summary}</p>
     <ContactInfo/>
 </section>

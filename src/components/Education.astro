@@ -1,24 +1,19 @@
 ---
 import { education } from "@cv";
+import DateRange from "./DateRange.astro";
 ---
 
 <ul>
 	{
-		education.map(({ institution, startDate, endDate, area, url }) => {
-			const startYear = new Date(startDate).getFullYear();
-			const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual";
-			const years = `${startYear} - ${endYear}`;
-
+		education.map(({ institution, startDate, endDate, area }) => {
 			return (
-				<div>
+				<li>
 					<h4>
-						<a target="_blank" href={url}>
-							{institution}
-						</a>
+                        {institution}
 					</h4>
 					<div>{area}</div>
-					<time>{years}</time>
-				</div>
+                    <DateRange start={startDate} end={endDate}/>
+				</li>
 			);
 		})
 	}

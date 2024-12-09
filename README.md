@@ -14,7 +14,7 @@ CV JSON schema from [**jsonresume.org**](https://jsonresume.org/schema/)
 - Browser review
 - Audit keyboard nav
 - Audit RTL
-- Audit VoiceOver
+- ~~Audit VoiceOver~~
 - SEO
 - PageSpeed Insights
 - Light mode

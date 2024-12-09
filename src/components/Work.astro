@@ -1,17 +1,7 @@
 ---
 import {work} from "@cv"
+import DateRange from "./DateRange.astro";
 
-import HTML from "@/icons/html.astro"
-import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import React from "@/icons/react.astro"
-
-const SKILLS_ICONS: Record<string, any> = {
-    HTML,
-    CSS,
-    JavaScript,
-    React,
-}
 ---
 <ul>
     {work.map(
@@ -26,15 +16,10 @@ const SKILLS_ICONS: Record<string, any> = {
              skills,
         }) => {
 
-            const startYear = new Date(startDate).getFullYear()
-            const endYear = endDate != null ? new Date(endDate).getFullYear() : "Present"
-
             return (
                 <li>
                     <header>
-                        <time datetime={startDate} data-title={startDate}>{startYear}</time>
-                        -
-                        <time datetime={endDate} data-title={endDate}>{endYear}</time>
+                        <DateRange start={startDate} end={endDate} />
                     </header>
                     <h3>{position} {name}</h3>
                     <div>
@@ -75,11 +60,9 @@ const SKILLS_ICONS: Record<string, any> = {
 
                 {/*<ul aria-label="Technologies used">
                         {skills && skills.map(skill => {
-                            const Icon = SKILLS_ICONS[skill]
                             return (
                                     <li class="flex gap-1 border-solid px-2 py-0.5 text-xs">
-                                        {Icon &&
-                                                <Icon/>} <span>{skill}</span>
+
                                     </li>
                             )
                         })}

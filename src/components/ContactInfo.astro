@@ -1,46 +1,28 @@
 ---
 import { basics } from "@cv";
-
-import Mail from "../icons/Mail.astro";
-import LinkedIn from "@/icons/LinkedIn.astro";
-import GitHub from "@/icons/GitHub.astro";
-import type { SocialIcon } from "@/types";
-
-const SOCIAL_ICONS: SocialIcon = {
-    GitHub,
-    LinkedIn,
-};
-const { profiles, phone, email } = basics;
+import Icon from "./Icon.astro";
+import ContactLink from "./ContactLink.astro";
+const { profiles, email } = basics;
 
 ---
 <section class="contact-info">
      {
         email && (
-            <a
-                class="contact-info__link"
-                href={`mailto:${email}`}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <Mail /> Email me
-            </a>
+            <ContactLink
+                url={`mailto:${email}`}
+                title="Email me"
+                icon="Mail"
+            />
         )
     }
     {
-        profiles.map(({ network, url }) => {
-            const Icon = SOCIAL_ICONS[network];
-
-            return (
-                <a
-                    class="contact-info__link"
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <Icon />
-                    {network}
-                </a>
-            );
-        })
+        profiles.map(({ network, url }) => (
+            <ContactLink
+                url={url}
+                title={network}
+                icon={network}
+            />
+        ) )
     }
 </section>
 <style>
@@ -49,25 +31,5 @@ const { profiles, phone, email } = basics;
         margin-block-start: 3rem;
         gap: 0.6em;
         z-index: 100;
-    }
-
-    .contact-info__link {
-        font-size: 0;
-        display: block;
-        width: 2.7rem;
-        padding: 0.3rem;
-        aspect-ratio: 1;
-        margin: 3px;
-        border-radius: 0.4rem;
-    }
-
-    .contact-info__link:hover {
-        background-color: var(--color--light);
-        color: var(--color--dark);
-    }
-
-    :global(.contact-info__link svg) {
-        height: auto;
-        width: 100%;
     }
 </style>

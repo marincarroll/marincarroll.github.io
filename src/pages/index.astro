@@ -6,7 +6,7 @@ import Profile from "../components/Profile.astro";
 import { basics } from "@cv";
 import Resume from "../components/Resume.astro";
 import Surprise from "../components/Surprise.astro";
-const { summary, url  } = basics;
+const { summary, url, name, label  } = basics;
 const { title } = Astro.props; // TODO
 
 ---
@@ -14,7 +14,7 @@ const { title } = Astro.props; // TODO
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>{title}</title>
+	<title>{name} / {label}</title>
 	<meta name="description" content={summary} />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -116,5 +116,11 @@ const { title } = Astro.props; // TODO
 		.print {
 			display: block !important;
 		}
+	}
+
+	.screen-reader-text {
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute;
+		height: 1px;
 	}
 </style>

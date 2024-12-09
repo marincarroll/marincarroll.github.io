@@ -1,14 +1,15 @@
 ---
-import PDFIcon from "../icons/pdf.astro";
-
+import Icon from "./Icon.astro";
 ---
 <footer class="footer">
     <div class="save-pdf">
-        <button onclick="window.print()" class="save-pdf__button">
-        <span class="save-pdf__icon">
-            <PDFIcon/>
-        </span>
-            PDF
+        <button
+            title="Download PDF"
+            aria-label="Download PDF"
+            onclick="window.print()"
+            class="save-pdf__button"
+        >
+            <Icon icon="PDF"/><span class="aria-hidden">PDF</span>
         </button>
     </div>
 </footer>
@@ -60,9 +61,9 @@ import PDFIcon from "../icons/pdf.astro";
         border: none;
         color: var(--color--light);
         padding-inline: 0.3em;
-        padding-block: calc(0.14 * var(--border-radius));
+        padding-block: calc(0.25 * var(--border-radius));
         line-height: 1;
-        border-radius: calc(var(--border-radius) * 0.475);
+        border-radius: calc(var(--border-radius) * 0.45);
         display: flex;
         font-size: 1.3em;
         font-weight: 500;
@@ -76,22 +77,25 @@ import PDFIcon from "../icons/pdf.astro";
         background-color: var(--color--light);
         color: var(--color--dark);
     }
-
-    .save-pdf__icon {
+</style>
+<style is:global>
+    .save-pdf .icon {
         width: 1.3em;
-        margin-top: 0.16em;
     }
 
     @media (prefers-reduced-motion: no-preference) {
 
-        .save-pdf__button:hover .save-pdf__icon {
+        .save-pdf__button:hover .icon {
             animation: bounce 0.4s ease infinite alternate;
         }
     }
 
     @keyframes bounce {
+        from {
+            transform: translateY(0.05em);
+        }
         to {
-            transform: translateY(-0.14em);
+            transform: translateY(-0.08em);
         }
     }
 </style>
