@@ -10,22 +10,20 @@ const { name } = basics;
 
 <style>
     .test {
-        background: greenyellow;
+     //   background: greenyellow;
     }
 
     .header {
-        position: fixed;
+        position: sticky;
         top: 0;
+        height: 100vh;
+        margin-bottom: -100vh;
         margin-inline: calc(-1* var(--border-width));
         z-index: 1;
-        width: 100%;
-        bottom: 0;
-        max-width: inherit;
         pointer-events: none;
         border-radius: calc( var(--border-radius) * 2);
         border: var(--border-width) solid var(--color--dark);
-        box-shadow: 0 99px 0 var(--color--dark),
-                    0 -99px 0 var(--color--dark);
+        box-shadow: 0 -99px 0 var(--color--dark), 0 13px 0 var(--color--dark);
     }
 
     .header__tab {

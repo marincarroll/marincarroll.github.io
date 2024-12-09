@@ -5,6 +5,7 @@ import Profile from "../components/Profile.astro";
 
 import { basics } from "@cv";
 import Resume from "../components/Resume.astro";
+import Surprise from "../components/Surprise.astro";
 const { summary, url  } = basics;
 const { title, pageName } = Astro.props; // TODO
 
@@ -35,14 +36,15 @@ const { title, pageName } = Astro.props; // TODO
 	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
-<div class="body__wrapper" x-data="{ open: false }">
-	<Header/>
-	<main>
-		<Profile/>
-		<Resume/>
-	</main>
-	<Footer/>
-</div>
+	<div class="body__wrapper" x-data="{ open: false }">
+		<Header/>
+		<main>
+			<Profile/>
+			<Resume/>
+		</main>
+		<Footer/>
+	</div>
+	<Surprise/>
 </body>
 </html>
 <style is:global>
