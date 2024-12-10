@@ -3,30 +3,38 @@ import { work } from "@cv";
 import DateRange from "./DateRange.astro";
 ---
 
-<ul>
+<ul class="work">
   {
-    work.map(
-      ({ name, startDate, endDate, position, summary, technologies }) => {
-        return (
-          <li>
-            <header>
-              <h4>
-                {position}
-                <span aria-hidden="true"> / </span>
-                {name}
-              </h4>
-              <DateRange start={startDate} end={endDate} />
-            </header>
-            {summary && <p>{summary}</p>}
-            {technologies && (
-              <>
-                <h5>Tech stack</h5>
-                <p>{technologies.join(", ")}</p>
-              </>
-            )}
-          </li>
-        );
-      },
-    )
+    work.map(({ name, startDate, endDate, position, summary }) => {
+      return (
+        <li class="work__item">
+          <header>
+            <DateRange start={startDate} end={endDate} />
+            <h4>
+              {position}
+              <span aria-hidden="true"> / </span>
+              {name}
+            </h4>
+          </header>
+          {summary && <p>{summary}</p>}
+        </li>
+      );
+    })
   }
 </ul>
+<style>
+  .work {
+    padding-inline-start: 2em;
+    border-left: 2px dashed var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  :global(.work .date-range) {
+    margin-left: calc(-2.6em + 2px);
+    border-bottom-left-radius: 0;
+    position: relative;
+    top: -0.2em;
+  }
+</style>

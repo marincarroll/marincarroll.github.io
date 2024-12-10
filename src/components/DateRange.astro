@@ -3,9 +3,25 @@ const { start, end } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
-<span>
+<div class="date-range">
   <time datetime={start}>{start}</time>
   <span aria-hidden="true">&ndash;</span>
   <span class="screen-reader-text">to</span>
   <time datetime={end || currentYear}>{end || "Present"}</time>
-</span>
+</div>
+
+<style>
+  .date-range {
+    display: inline;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-radius: 0.4em;
+    padding: 0.2em 0.6em;
+    line-height: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    -webkit-font-smoothing: antialiased;
+  }
+</style>

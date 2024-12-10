@@ -2,6 +2,7 @@ export interface CV {
   basics: Basics;
   work: Array<Work>;
   education: Array<Education>;
+  etcetera: string;
 }
 
 interface Basics {
@@ -11,6 +12,7 @@ interface Basics {
   phone: string;
   url: string;
   summary: string;
+  stack: string;
   location: Location;
   profiles: Array<Profiles>;
 }
@@ -31,7 +33,6 @@ interface Work {
   summary: string;
   startDate: number;
   endDate: number | undefined;
-  technologies: Array<string>;
 }
 
 interface Education {

@@ -1,7 +1,7 @@
 ---
 import ContactInfo from "./ContactInfo.astro";
 import { basics } from "@cv";
-const { summary, label, location } = basics;
+const { summary, skills, label, location } = basics;
 const { city, region } = location;
 ---
 
@@ -12,10 +12,15 @@ const { city, region } = location;
     {city}, {region}
   </h2>
   <p class="profile__summary">{summary}</p>
+  <p class="profile__skills">Current stack: {skills}</p>
   <ContactInfo />
 </section>
 
 <style>
+  .profile {
+    max-width: 70ch;
+  }
+
   @media screen {
     .profile {
       position: sticky;
@@ -26,11 +31,11 @@ const { city, region } = location;
   }
 
   .profile__title {
-      -webkit-font-smoothing: antialiased;
-      margin-block: 0 0.5em;
+    -webkit-font-smoothing: antialiased;
+    margin-block: 0 0.5em;
   }
 
   .profile__summary {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 </style>

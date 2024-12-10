@@ -2,6 +2,7 @@
 import Education from "./Education.astro";
 import Work from "./Work.astro";
 import ResumeSection from "./ResumeSection.astro";
+import { etcetera } from "cv.json";
 // TODO: eslint parsing error only when negative percentage margins are used in
 //  x-intersect?
 ---
@@ -17,8 +18,8 @@ import ResumeSection from "./ResumeSection.astro";
   <ResumeSection title="Education">
     <Education />
   </ResumeSection>
-  <ResumeSection title="Professional Interests" class="no-print">
-    ty for visiting
+  <ResumeSection title="Etcetera" class="no-print">
+    {etcetera}
   </ResumeSection>
 </section>
 <style>
@@ -34,7 +35,7 @@ import ResumeSection from "./ResumeSection.astro";
   @media screen {
     .resume {
       padding: 3em 6vw 5em;
-      gap: 3em;
+      gap: 2em;
     }
   }
 
@@ -52,7 +53,7 @@ import ResumeSection from "./ResumeSection.astro";
   }
 
   :global(.resume :is(h1, h2, h3, h4, h5, h6)) {
-    margin-block: 2em 1em;
+    margin-block: 1.5em 1em;
   }
   /* stylelint-enable selector-pseudo-class-no-unknown */
 </style>
