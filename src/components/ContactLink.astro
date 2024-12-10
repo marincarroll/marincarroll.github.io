@@ -39,6 +39,8 @@ const SVG = ICON_OPTIONS[icon];
     color: var(--color-dark);
   }
 
+  /* TODO shouldn't this come with stylelint-config-html/astro? */
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
   :global(.contact-info__link svg) {
     display: block;
   }

@@ -17,7 +17,7 @@ import ResumeSection from "./ResumeSection.astro";
   <ResumeSection title="Education">
     <Education />
   </ResumeSection>
-  <ResumeSection title="Professional Interests">
+  <ResumeSection title="Professional Interests" class="no-print">
     ty for visiting
   </ResumeSection>
 </section>
@@ -29,8 +29,19 @@ import ResumeSection from "./ResumeSection.astro";
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 3em;
-    padding: 3em 6vw 5em;
+  }
+
+  @media screen {
+    .resume {
+      padding: 3em 6vw 5em;
+      gap: 3em;
+    }
+  }
+
+  @media print {
+    .resume {
+      padding: 0 2em 2em;
+    }
   }
 
   /* TODO shouldn't this come with stylelint-config-html/astro? */

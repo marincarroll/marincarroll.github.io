@@ -18,7 +18,7 @@
 - print mode
 - favicons
 - Browser review
-- Audit all social share cards
+- Social share cards
 - ~~Audit keyboard nav~~
 - ~~Audit VoiceOver~~
 - ~~check prettier, eslint?~~

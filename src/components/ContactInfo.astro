@@ -1,23 +1,29 @@
 ---
 import { basics } from "@cv";
 import ContactLink from "./ContactLink.astro";
-const { profiles, email } = basics;
+const { profiles, email, phone } = basics;
 ---
 
-<section class="contact-info">
-  {
-    email && (
-      <ContactLink url={`mailto:${email}`} title="Email me" icon="Mail" />
-    )
-  }
-  {
-    profiles.map(({ network, url }) => (
-      <ContactLink url={url} title={network} icon={network} />
-    ))
-  }
+<section class="contact-info no-print">
+  <div class="no-print">
+    {
+      email && (
+        <ContactLink url={`mailto:${email}`} title="Email me" icon="Mail" />
+      )
+    }
+    {
+      profiles.map(({ network, url }) => (
+        <ContactLink url={url} title={network} icon={network} />
+      ))
+    }
+  </div>
+  <div class="print">
+    <p>{email}</p>
+    <p>{phone}</p>
+  </div>
 </section>
 <style>
-  .contact-info {
+  .contact-info .no-print {
     display: flex;
     margin-block-start: 3rem;
     gap: 0.6em;

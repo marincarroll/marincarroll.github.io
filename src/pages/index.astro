@@ -25,9 +25,20 @@ import Surprise from "@/components/Surprise.astro";
     --font-family-body: "DM Mono", monospace;
     --font-family-display: "Jacquard 12", system-ui;
     --content-width: 800px;
-    --border-width: min(4vw, 25px);
     --border-radius: min(6.7vw, 2rem);
     --header-height: min(28vw, 8rem);
+  }
+
+  @media screen {
+    :root {
+      --border-width: min(4vw, 25px);
+    }
+  }
+
+  @media print {
+    :root {
+      --border-width: 15px;
+    }
   }
 
   body {
@@ -36,8 +47,19 @@ import Surprise from "@/components/Surprise.astro";
     font-family: var(--font-family-body);
     background: var(--color-dark);
     color: var(--color-light);
-    font-size: min(3.7vw, 1rem);
     -webkit-font-smoothing: antialiased;
+  }
+
+  @media screen {
+    body {
+      font-size: min(3.7vw, 1rem);
+    }
+  }
+
+  @media print {
+    body {
+      font-size: 14px;
+    }
   }
 
   .body__wrapper {

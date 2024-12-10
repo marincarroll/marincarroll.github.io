@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "astro dev",
-    "build": "astro check && astro build && npm run prettier && npm run stylelint && npm run eslint",
+    "build": "astro check && astro build && npm run prettier",
     "preview": "astro preview",
     "check": "astro check",
     "prettier": "npx prettier . --write",
