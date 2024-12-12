@@ -23,6 +23,7 @@
 - ~~Audit VoiceOver~~
 - ~~check prettier, eslint?~~
 - LAUNCH!!
+- check favicons: https://realfavicongenerator.net/favicon-checker
 - Ensure 404s redirect to home
 
 ### Post-Launch
