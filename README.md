@@ -11,28 +11,30 @@
 | ⚙️  | `stylelint` | Lints with Stylelint.                                                                                               |
 
 ## TODO
-
-### Pre-Launch
-
-- add actual data
+### Crucial
+- add data for each job
+- Finish tweaking resume area styles
 - print mode
 - ~~favicons~~
-- Browser review
+- Browser review [wip]
+  - Buggy flashing around bottom of header area on Desktop Safari & FF
 - Social share cards
-- ~~Audit keyboard nav~~
-- ~~Audit VoiceOver~~
+- Audit keyboard nav [wip]
+  - Did this initially but want to double check after all content entered
+- Audit VoiceOver [wip]
+  - Did this initially and it passes, but I want to make improvements, for example, footer is read as contentinfo and 
+    there's prob a more appropriate role...?
 - ~~check prettier, eslint?~~
-- LAUNCH!!
 - Ensure 404s redirect to home
-
-### Post-Launch
-
+- Ask Kevin to check real Android experience and icon on his phone
 - PageSpeed Insights
-- Light mode
-- SEO
+- SEO / get indexed
+- Review repo settings, readme, GitHub profile
+
+### Nice to have
+- Light mode? (Doesn't make a ton of sense because large parts of the page will always be light and large parts will always be dark?)
 - More robust TypeScript explorations?
 - Structured data
 - IDE highlighting fixes
 - Review wierd devices like apple watch?
-- Review repo settings, readme, GitHub profile
 - Update and add link to wp.org profile
