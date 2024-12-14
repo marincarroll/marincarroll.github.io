@@ -1,19 +1,20 @@
 {
-  "name": "Marin Carroll",
+  "name": "Marin Carroll / Web Developer",
+  "short_name": "Marin Carroll",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/webmanifest-icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icon-512-maskable.png",
+      "src": "/webmanifest-icon-512-maskable.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/webmanifest-icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

@@ -9,7 +9,7 @@
 
             @media not (prefers-color-scheme: dark) {
                 .rect {
-                    fill:var(--color-dark);
+                    fill: var(--color-dark);
                 }
 
                 .text{
