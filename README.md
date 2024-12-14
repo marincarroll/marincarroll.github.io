@@ -16,14 +16,13 @@
 
 - add actual data
 - print mode
-- favicons
+- ~~favicons~~
 - Browser review
 - Social share cards
 - ~~Audit keyboard nav~~
 - ~~Audit VoiceOver~~
 - ~~check prettier, eslint?~~
 - LAUNCH!!
-- check favicons: https://realfavicongenerator.net/favicon-checker
 - Ensure 404s redirect to home
 
 ### Post-Launch
