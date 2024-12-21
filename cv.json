@@ -5,8 +5,8 @@
     "email": "marin@marincarroll.com",
     "phone": "+1 510-332-1110",
     "url": "https://marincarroll.com",
-    "summary": "I've worked as a web developer for 6 years professionally (15+ years as a hobbyist), and I specialize in WordPress.",
-    "skills": "React, vanilla JS, SCSS, PHP, webpack, Figma",
+    "summary": "I've worked as a web developer for 6 years professionally (15+ years as a hobbyist!), and I specialize in WordPress.",
+    "skills": "React, vanilla JS, SCSS, PHP, webpack, Figma, GSAP",
     "location": {
       "city": "Boston",
       "region": "MA"
@@ -27,21 +27,21 @@
       "name": "Northeastern University",
       "position": "Full-Stack Developer",
       "startDate": "Aug 2022",
-      "summary": "TODO"
+      "summary": "In External Affairs' fast-paced newsroom, we continually work to improve user engagement and performance for Northeastern Global News and related microsites. I specialize in custom block development that enhances news content, but I also spend quite a bit of time maintaining & modernizing our large codebase."
     },
     {
       "name": "Image Conscious Studios",
       "position": "Front-End Designer",
       "startDate": "Oct 2019",
       "endDate": "Aug 2022",
-      "summary": "TODO"
+      "summary": "ICS is a creative agency specializing in web (mostly WordPress, occasionally Shopify). Most projects involved custom block & theme development, integrating 3rd-party APIs, and GSAP animations/scrollytelling. I also worked with PMs on estimates/timelines, interfaced with clients, and did some UI design work."
     },
     {
       "name": "Image Conscious Studios",
       "position": "Apprentice",
       "startDate": "March 2019",
       "endDate": "Oct 2019",
-      "summary": "TODO"
+      "summary": "As an apprentice, I split my time between web development and UI design."
     },
     {
       "name": "OS Fitness Clubs",
