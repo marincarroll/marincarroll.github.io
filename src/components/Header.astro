@@ -1,26 +1,21 @@
 ---
 import { basics } from "@resume";
-const { name } = basics;
+const { name, email, phone } = basics;
 ---
 
 <header class="header">
   <div class="header__tab" :class="{ 'is-shrunken': shrinkHeader }">
     <h1 class="header__name">{name}</h1>
   </div>
+  <div class="contact-info print">
+    <p>{email}</p>
+    <p>{phone}</p>
+  </div>
 </header>
 
 <style>
   .header {
     font-size: min(16.5vw, 5em);
-  }
-
-  .header__name {
-    font-family: var(--font-family-display);
-    -webkit-font-smoothing: antialiased;
-    font-weight: 100;
-    font-size: inherit;
-    line-height: 1.2;
-    margin: 0;
   }
 
   @media screen {
@@ -30,7 +25,6 @@ const { name } = basics;
       top: 0;
       width: 100%;
       max-width: var(--content-width);
-
       margin-inline: calc(-1 * var(--border-width));
       z-index: 1;
       pointer-events: none;
@@ -40,7 +34,15 @@ const { name } = basics;
         0 -99px 0 var(--color-dark),
         0 0.23em 0 var(--color-dark);
     }
+  }
 
+  @media print {
+    .header {
+      display: flex;
+    }
+  }
+
+  @media screen {
     .header__tab {
       display: inline-flex;
       align-items: flex-end;
@@ -72,11 +74,6 @@ const { name } = basics;
       top: 0;
       right: calc(-1 * var(--border-radius));
     }
-
-    .header__tab.is-shrunken {
-      font-size: 70%;
-      height: 1em;
-    }
   }
 
   @media screen and (prefers-reduced-motion: no-preference) {
@@ -84,5 +81,26 @@ const { name } = basics;
       transition-duration: 0.4s;
       transition-property: height, font-size;
     }
+  }
+
+  .header__tab.is-shrunken {
+    font-size: 70%;
+    height: 1em;
+  }
+
+  .header__name {
+      font-family: var(--font-family-display);
+      -webkit-font-smoothing: antialiased;
+      font-weight: 100;
+      font-size: inherit;
+      line-height: 1.2;
+      margin: 0;
+  }
+
+  .header .print {
+    font-size: 0.75rem;
+    flex: 1;
+    text-align: right;
+    line-height: 1;
   }
 </style>

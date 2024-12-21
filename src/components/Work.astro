@@ -8,7 +8,7 @@ import DateRange from "./DateRange.astro";
     work.map(({ name, startDate, endDate, position, summary }) => {
       return (
         <li class="work__item">
-          <header>
+          <header class="work__item-header">
             <DateRange start={startDate} end={endDate} />
             <h4>
               {position}
@@ -28,9 +28,22 @@ import DateRange from "./DateRange.astro";
     border-left: 2px dashed var(--color-dark);
     display: flex;
     flex-direction: column;
-    gap: 3em;
   }
 
+  @media screen {
+    .work {
+      gap: 3em;
+    }
+  }
+
+  @media print {
+    .work {
+      gap: 2em;
+    }
+  }
+
+  /* TODO shouldn't this come with stylelint-config-html/astro? */
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
   :global(.work .date-range) {
     margin-left: calc(-2.6em + 2px);
     border-bottom-left-radius: 0;

@@ -25,18 +25,25 @@ const { city, region } = location;
     .profile {
       position: sticky;
       top: 0;
-      padding-top: calc(var(--header-height) + (1.5 * var(--border-radius)));
-      padding-bottom: 4em;
+      padding-block: calc(
+        var(--header-height) + (1.5 * var(--border-radius))
+      ) 4em;
       z-index: -1;
     }
+  }
+
+  @media print {
+    .profile {
+      padding-block-end: 3em;
+    }
+  }
+
+  .profile__summary {
+    font-size: 1.2em;
   }
 
   .profile__title {
     -webkit-font-smoothing: antialiased;
     margin-block: 0 0.5em;
-  }
-
-  .profile__summary {
-    font-size: 1.2rem;
   }
 </style>

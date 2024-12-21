@@ -34,34 +34,32 @@ import { etcetera } from "resume.json";
 
   @media screen {
     .resume {
-      padding: 3em 6vw 4em;
-      gap: 2em;
+      padding: 5em 6vw 4em;
+      gap: 4em;
     }
   }
 
   @media print {
     .resume {
-      padding: 0 2em 2em;
+      padding: 3em 4em;
+      gap: 3em;
     }
   }
-
-  /* TODO shouldn't this come with stylelint-config-html/astro? */
-  /* stylelint-disable selector-pseudo-class-no-unknown */
-  :global(.resume ::selection) {
+</style>
+<style is:global>
+  .resume ::selection {
     background-color: var(--color-dark);
     color: var(--color-light);
   }
-  /* stylelint-enable selector-pseudo-class-no-unknown */
-</style>
-<style is:global>
+
   .resume h3 {
-    font-size: 1.5rem;
     margin-block: 0 0.5em;
+    font-size: 1.5em;
   }
 
   .resume h4 {
-    font-size: 1.125rem;
     margin-block: 0 0.5em;
+    font-size: 1.125em;
   }
 
   .resume p {

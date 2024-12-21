@@ -1,31 +1,25 @@
 ---
 import { basics } from "@resume";
 import ContactLink from "./ContactLink.astro";
-const { profiles, email, phone } = basics;
+const { profiles, email } = basics;
 ---
 
 <section class="contact-info no-print">
-  <div class="no-print">
-    {
-      email && (
-        <ContactLink url={`mailto:${email}`} title="Email me" icon="Mail" />
-      )
-    }
-    {
-      profiles.map(({ network, url }) => (
-        <ContactLink url={url} title={network} icon={network} />
-      ))
-    }
-  </div>
-  <div class="print">
-    <p>{email}</p>
-    <p>{phone}</p>
-  </div>
+  {
+    email && (
+      <ContactLink url={`mailto:${email}`} title="Email me" icon="Mail" />
+    )
+  }
+  {
+    profiles.map(({ network, url }) => (
+      <ContactLink url={url} title={network} icon={network} />
+    ))
+  }
 </section>
 <style>
-  .contact-info .no-print {
+  .contact-info {
     display: flex;
-    margin-block-start: 3rem;
+    margin-block-start: 3em;
     gap: 0.6em;
     z-index: 100;
   }

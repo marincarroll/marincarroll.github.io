@@ -22,20 +22,20 @@ import Resume from "@/components/Resume.astro";
     --color-dark: rgb(18 14 18);
     --font-family-body: "Space Mono", monospace;
     --font-family-display: "Jacquard 12", system-ui;
-    --content-width: 800px;
     --border-radius: min(6.7vw, 2rem);
     --header-height: min(28vw, 8rem);
+    --border-width: min(4vw, 25px);
   }
 
   @media screen {
     :root {
-      --border-width: min(4vw, 25px);
+      --content-width: 800px;
     }
   }
 
   @media print {
     :root {
-      --border-width: 15px;
+      --content-width: 700px;
     }
   }
 
@@ -49,13 +49,14 @@ import Resume from "@/components/Resume.astro";
 
   @media screen {
     body {
-      font-size: min(3.7vw, 1rem);
+      font-size: min(3.7vw, 16px);
     }
   }
 
   @media print {
     body {
-      font-size: 14px;
+      padding-block: 2em;
+      font-size: 11px;
     }
   }
 
