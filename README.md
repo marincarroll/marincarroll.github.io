@@ -36,7 +36,9 @@
 ### Nice to have
 
 - Light mode? (Doesn't make a ton of sense because large parts of the page will always be light and large parts will always be dark?)
-- More robust TypeScript explorations?
+- Markdown setup for content instead of JSON
+- Set up more robust TypeScript
+  - resume.d.ts is doing nothing right now
 - Structured data
 - IDE highlighting fixes
 - Review wierd devices like apple watch?
