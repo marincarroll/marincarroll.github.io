@@ -34,7 +34,7 @@ import { etcetera } from "resume.json";
 
   @media screen {
     .resume {
-      padding: 3em 6vw 5em;
+      padding: 3em 6vw 4em;
       gap: 2em;
     }
   }
@@ -51,9 +51,20 @@ import { etcetera } from "resume.json";
     background-color: var(--color-dark);
     color: var(--color-light);
   }
-
-  :global(.resume :is(h1, h2, h3, h4, h5, h6)) {
-    margin-block: 1.5em 1em;
-  }
   /* stylelint-enable selector-pseudo-class-no-unknown */
+</style>
+<style is:global>
+  .resume h3 {
+    font-size: 1.5rem;
+    margin-block: 0 0.5em;
+  }
+
+  .resume h4 {
+    font-size: 1.125rem;
+    margin-block: 0 0.5em;
+  }
+
+  .resume p {
+    margin-block: 0;
+  }
 </style>
