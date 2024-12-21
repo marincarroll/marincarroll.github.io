@@ -25,10 +25,12 @@ const { name } = basics;
 
   @media screen {
     .header {
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      margin-bottom: -100vh;
+      position: fixed;
+       bottom: 0;
+        top: 0;
+        width: 100%;
+        max-width: var(--content-width);
+
       margin-inline: calc(-1 * var(--border-width));
       z-index: 1;
       pointer-events: none;
