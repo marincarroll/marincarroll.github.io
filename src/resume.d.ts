@@ -1,4 +1,4 @@
-export interface CV {
+export interface Resume {
   basics: Basics;
   work: Array<Work>;
   education: Array<Education>;
@@ -12,7 +12,7 @@ interface Basics {
   phone: string;
   url: string;
   summary: string;
-  stack: string;
+  skills: string;
   location: Location;
   profiles: Array<Profiles>;
 }
