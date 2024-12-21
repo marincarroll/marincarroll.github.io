@@ -1,6 +1,6 @@
 ---
 import ContactInfo from "./ContactInfo.astro";
-import { basics } from "@cv";
+import { basics } from "@resume";
 const { summary, skills, label, location } = basics;
 const { city, region } = location;
 ---
@@ -12,7 +12,7 @@ const { city, region } = location;
     {city}, {region}
   </h2>
   <p class="profile__summary">{summary}</p>
-  <p class="profile__skills">Current stack: {skills}</p>
+  <p class="profile__skills">{skills}</p>
   <ContactInfo />
 </section>
 
@@ -27,6 +27,7 @@ const { city, region } = location;
       top: 0;
       padding-top: calc(var(--header-height) + (1.5 * var(--border-radius)));
       padding-bottom: 4em;
+      z-index: -1;
     }
   }
 

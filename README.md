@@ -11,7 +11,9 @@
 | ⚙️  | `stylelint` | Lints with Stylelint.                                                                                               |
 
 ## TODO
+
 ### Crucial
+
 - add data for each job
 - Finish tweaking resume area styles
 - print mode
@@ -22,7 +24,7 @@
 - Audit keyboard nav [wip]
   - Did this initially but want to double check after all content entered
 - Audit VoiceOver [wip]
-  - Did this initially and it passes, but I want to make improvements, for example, footer is read as contentinfo and 
+  - Did this initially and it passes, but I want to make improvements, for example, footer is read as contentinfo and
     there's prob a more appropriate role...?
 - ~~check prettier, eslint?~~
 - Ensure 404s redirect to home
@@ -32,6 +34,7 @@
 - Review repo settings, readme, GitHub profile
 
 ### Nice to have
+
 - Light mode? (Doesn't make a ton of sense because large parts of the page will always be light and large parts will always be dark?)
 - More robust TypeScript explorations?
 - Structured data

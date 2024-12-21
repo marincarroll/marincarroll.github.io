@@ -5,7 +5,7 @@ import pdf from "astro-pdf";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://marincarroll.github.io',
+  site: "https://marincarroll.github.io",
   integrations: [
     alpinejs(),
     pdf({
