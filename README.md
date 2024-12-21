@@ -17,7 +17,7 @@
 - print mode
 - ~~favicons~~
 - Browser review [wip]
-  - Buggy flashing around bottom of header area on Desktop Safari & FF
+  ~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
 - Social share cards
 - Audit keyboard nav [wip]
   - Did this initially but want to double check after all content entered
