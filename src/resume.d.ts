@@ -10,7 +10,6 @@ interface Basics {
   label: string;
   email: string;
   phone: string;
-  url: string;
   summary: string;
   skills: string;
   location: Location;

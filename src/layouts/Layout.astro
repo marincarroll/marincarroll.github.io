@@ -1,7 +1,8 @@
 ---
 import { basics } from "@resume";
-const { summary, url, name, label } = basics;
+const { summary, name, label } = basics;
 const title = `${name} / ${label}`;
+const url = Astro.site.href;
 ---
 
 <!doctype html>
