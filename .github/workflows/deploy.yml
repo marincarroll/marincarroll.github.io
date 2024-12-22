@@ -16,7 +16,8 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    ## ubuntu-latest (24.04) doesn't work with astro-pdf/puppeteer
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
