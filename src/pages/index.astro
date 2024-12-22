@@ -9,13 +9,19 @@ import Resume from "@/components/Resume.astro";
 <Layout>
   <div class="body__wrapper" x-data="{ shrinkHeader: false }">
     <Header />
-    <main>
+    <main class="main">
       <Profile />
       <Resume />
     </main>
     <Footer />
   </div>
 </Layout>
+<style>
+  .main {
+      position: relative;
+      z-index: 0;
+  }
+</style>
 <style is:global>
   :root {
     --color-light: rgb(255 191 203);
