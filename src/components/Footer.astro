@@ -1,6 +1,5 @@
 ---
 import PDFIcon from "@/icons/PDF.astro";
-const url = Astro.site.href;
 ---
 
 <footer class="footer">
@@ -8,7 +7,7 @@ const url = Astro.site.href;
     <a
       title="Download PDF"
       aria-label="Download PDF"
-      href={url + 'MarinCarroll-Resume.pdf'}
+      href="/MarinCarroll-Resume.pdf"
       class="save-pdf__link"
       target="_blank"
     >
