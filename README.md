@@ -17,7 +17,6 @@
 ~~- add data for each job~~
 ~~- Finish tweaking resume area styles~~
 ~~- print mode~~
-
 - ~~favicons~~
   ~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
 - Social share cards
@@ -34,7 +33,6 @@
 - Review repo settings, readme, GitHub profile
 
 ### Nice to have
-
 - Light mode? (Doesn't make a ton of sense because large parts of the page will always be light and large parts will always be dark?)
 - Markdown setup for content instead of JSON
 - Set up more robust TypeScript
@@ -42,4 +40,5 @@
 - Structured data
 - IDE highlighting fixes
 - Review wierd devices like apple watch?
+- Are custom cursors and scrollbars truly so awful?
 - Update and add link to wp.org profile
