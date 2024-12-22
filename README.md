@@ -26,8 +26,8 @@
 - Audit of keyboard nav [wip]
 - Audit VoiceOver [wip]
 - ~~check prettier, eslint?~~
-~~- Ensure 404s redirect to home~~
-  - Don't love how GitHub pages says 'Redirecting to...'
+- ~~Ensure 404s redirect to home~~
+  - Don't love how GitHub pages says 'Redirecting to...' when 404ing
 - Ask Kevin to check real Android experience and icon on his phone
 - PageSpeed Insights
 - SEO / get indexed
