@@ -2,6 +2,7 @@
 const { start, end } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
+
 <div class="date-range">
   <time datetime={start}>{start}</time>
   <span aria-hidden="true">&ndash;</span>
