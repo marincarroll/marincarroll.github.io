@@ -18,9 +18,9 @@
 ~~- Finish tweaking resume area styles~~
 ~~- print mode~~
 ~~- favicons~~
-  ~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
+~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
 ~~- Social share cards~~
-- set up the URL I've already owned for a million years
+- set up the URL I've already owned for a million years [wip]
 - Browser review [wip]
 - Audit of keyboard nav [wip]
 - Audit VoiceOver [wip]
@@ -33,6 +33,7 @@
 - Review repo settings, readme, GitHub profile
 
 ### Nice to have
+
 - Light mode? (Doesn't make a ton of sense because large parts of the page will always be light and large parts will always be dark?)
 - Markdown setup for content instead of JSON
 - Set up more robust TypeScript
