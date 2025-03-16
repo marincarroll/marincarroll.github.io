@@ -20,6 +20,7 @@
 ~~- favicons~~
 ~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
 ~~- Social share cards~~
+
 - set up the URL I've already owned for a million years [wip]
 - Browser review [wip]
 - Audit of keyboard nav [wip]
