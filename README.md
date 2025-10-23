@@ -28,14 +28,13 @@
 - ~~check prettier, eslint?~~
 - ~~Ensure 404s redirect to home~~
   - Don't love how GitHub pages says 'Redirecting to...' when 404ing
-- Ask Kevin to check real Android experience and icon on his phone
+- Test Android
 - PageSpeed Insights
 - SEO / get indexed
 - Review repo settings, readme, GitHub profile
 
 ### Nice to have
 
-- Light mode? (Doesn't make a ton of sense because large parts of the page will always be light and large parts will always be dark?)
 - Markdown setup for content instead of JSON
 - Set up more robust TypeScript
   - resume.d.ts is doing nothing right now
