@@ -15,7 +15,7 @@ const { name, email, phone } = basics;
 
 <style>
   .header {
-    font-size: min(10vw, 3.5em);
+    font-size: min(10vw, 3em);
   }
 
   @media screen {
@@ -45,12 +45,12 @@ const { name, email, phone } = basics;
   @media screen {
     .header__tab {
       display: inline-flex;
-      align-items: flex-end;
+      align-items: end;
       position: absolute;
       height: var(--header-height);
       background: var(--color-dark);
       border-bottom-right-radius: var(--border-radius);
-      padding-right: 0.3em;
+      padding-right: 0.5em;
       z-index: 9999;
     }
 
@@ -84,8 +84,8 @@ const { name, email, phone } = basics;
   }
 
   .header__tab.is-shrunken {
-    font-size: 70%;
-    height: 1em;
+    font-size: 55%;
+    height: 2em;
   }
 
   .header__name {
@@ -94,9 +94,8 @@ const { name, email, phone } = basics;
     font-weight: 600;
     font-size: inherit;
     text-transform: uppercase;
-    letter-spacing: 0.07em;
-    line-height: 1.2;
-    margin: 0;
+    letter-spacing: 0.1em;
+    margin-block: 0 0.5em;
   }
 
   .header .print {
