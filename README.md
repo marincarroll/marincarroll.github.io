@@ -32,6 +32,7 @@
 - PageSpeed Insights
 - SEO / get indexed
 - Review repo settings, readme, GitHub profile
+- on iOS menu bar causes pink gaps in bottom corners
 
 ### Nice to have
 
