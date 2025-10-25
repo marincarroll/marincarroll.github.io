@@ -2,7 +2,8 @@
 import Education from "./Education.astro";
 import Work from "./Work.astro";
 import ResumeSection from "./ResumeSection.astro";
-import { etcetera } from "resume.json";
+import { Content as Etcetera } from "../etcetera.md";
+
 // TODO: eslint parsing error only when negative percentage margins are used in
 //  x-intersect?
 ---
@@ -19,7 +20,7 @@ import { etcetera } from "resume.json";
     <Education />
   </ResumeSection>
   <ResumeSection title="Etcetera" class="no-print">
-    {etcetera}
+    <Etcetera />
   </ResumeSection>
 </section>
 <style>

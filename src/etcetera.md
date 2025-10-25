@@ -1,0 +1,1 @@
+I generally don't freelance, but I do provide low-cost or paid-in-kind services if a select project piques my interest. I'm especially interested in music-industry and mission-driven projects – please reach out if you have a project in mind!

@@ -1,22 +1,29 @@
 ---
-import { education } from "@resume";
+import { getCollection, render } from "astro:content";
+const education = await getCollection("education");
 import DateRange from "./DateRange.astro";
 ---
 
 <ul>
   {
-    education.map(({ institution, startDate, endDate, degree, summary }) => (
-      <li>
-        <header>
-          <DateRange start={startDate} end={endDate} />
-          <h4>
-            {degree}
-            <span aria-hidden="true"> / </span>
-            {institution}
-          </h4>
-        </header>
-        <p>{summary}</p>
-      </li>
-    ))
+    education.map(async (entry) => {
+      const {
+        data: { institution, startDate, endDate, degree },
+      } = entry;
+      const { Content } = await render(entry);
+      return (
+        <li>
+          <header>
+            <DateRange start={startDate} end={endDate} />
+            <h4>
+              {degree}
+              <span aria-hidden="true"> / </span>
+              {institution}
+            </h4>
+          </header>
+          <Content />
+        </li>
+      );
+    })
   }
 </ul>

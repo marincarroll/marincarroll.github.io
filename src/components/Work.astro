@@ -1,11 +1,16 @@
 ---
-import { work } from "@resume";
+import { getCollection, render } from "astro:content";
+const work = await getCollection("work");
 import DateRange from "./DateRange.astro";
 ---
 
 <ul class="work">
   {
-    work.map(({ name, startDate, endDate, position, summary }) => {
+    work.map(async (entry) => {
+      const {
+        data: { name, startDate, endDate, position },
+      } = entry;
+      const { Content } = await render(entry);
       return (
         <li class="work__item">
           <header class="work__item-header">
@@ -16,7 +21,7 @@ import DateRange from "./DateRange.astro";
               {name}
             </h4>
           </header>
-          {summary && <p>{summary}</p>}
+          <Content />
         </li>
       );
     })
