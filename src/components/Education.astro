@@ -4,7 +4,7 @@ const education = await getCollection("education");
 import DateRange from "./DateRange.astro";
 ---
 
-<ul>
+<ul class="education">
   {
     education.map(async (entry) => {
       const {
@@ -12,7 +12,7 @@ import DateRange from "./DateRange.astro";
       } = entry;
       const { Content } = await render(entry);
       return (
-        <li>
+        <li class="education__item">
           <header>
             <DateRange start={startDate} end={endDate} />
             <h4>
@@ -27,3 +27,15 @@ import DateRange from "./DateRange.astro";
     })
   }
 </ul>
+<style>
+  .education__item header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    align-items: flex-start;
+  }
+
+  .education__item h4 {
+    flex: 1;
+  }
+</style>
