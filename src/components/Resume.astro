@@ -53,6 +53,11 @@ import { Content as Etcetera } from "../etcetera.md";
     color: var(--color-light);
   }
 
+  .date-range ::selection {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+
   .resume h3 {
     margin-block: 0 0.5em;
     font-size: 1.5em;
@@ -63,7 +68,24 @@ import { Content as Etcetera } from "../etcetera.md";
     font-size: 1.125em;
   }
 
-  .resume p {
-    margin-block: 0;
+  .resume .work__item li {
+    display: flex;
+  }
+
+  .resume .work__item li + li {
+    margin-block-start: 0.5em;
+  }
+
+  .resume .work__item li:before {
+    content: "–";
+    margin-inline-end: 0.75em;
+  }
+
+  .resume p:first-child {
+    margin-block-start: 0;
+  }
+
+  .resume p:last-child {
+    margin-block-end: 0;
   }
 </style>

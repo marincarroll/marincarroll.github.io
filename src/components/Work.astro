@@ -1,6 +1,10 @@
 ---
 import { getCollection, render } from "astro:content";
 const work = await getCollection("work");
+work.sort(
+  (a, b) => Date.parse(b.data.startDate) - Date.parse(a.data.startDate),
+);
+
 import DateRange from "./DateRange.astro";
 ---
 

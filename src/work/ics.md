@@ -5,4 +5,8 @@ startDate: "Oct 2019"
 endDate: "Aug 2022"
 ---
 
-Lead the developer team at a creative web agency building greenfield sites (mostly WordPress, occasionally Shopify), specializing in biotech. Most projects involved custom block development (React), integrating 3rd-party REST APIs, and GSAP animations/scrollytelling. This role was client-facing and involved a bit of UI design.
+Lead the developer team at a creative web agency building greenfield sites (mostly WordPress, occasionally Shopify), specializing in biotech.
+
+Most projects involved custom block development (React), integrating 3rd-party REST APIs, and GSAP animations/scrollytelling. This role was client-facing and involved estimating & planning in tandem with PMs, plus a bit of UI design.
+
+Highlight: [2022 Best Homepage Webby Honoree](https://winners.webbyawards.com/2022/websites-and-mobile-sites/features-design/best-homepage/206600/biology-by-design-ginkgo-bioworks) for Ginkgo Bioworks.
