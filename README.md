@@ -37,7 +37,7 @@
 
 ### Nice to have
 
-- Markdown setup for content instead of JSON
+- Markdown setup for content instead of JSON [wip]
 - Set up more robust TypeScript
   - resume.d.ts is doing nothing right now
 - Structured data
