@@ -9,6 +9,6 @@ I currently work in the newsroom at Northeastern Global News, working to drive u
 This year I worked on:
 
 - Spearheading an initiative to ensure analytics tags' GDPR compliance, using GTM & TrustArc.
-- Using Adobe Target to create A/B tests and serve personalized content w/the Delivery API.
-- Creating interactive news features using GSAP animations, video content, and scrollytelling.
-- Building complex custom Gutenberg blocks (graphics & media, interactive widgets, recommended content) to improve user engagement with news stories.
+- Using Adobe Target to create A/B tests and serve personalized content.
+- Creating interactive news features using GSAP animations and scrollytelling.
+- Building complex custom Gutenberg blocks (graphics & media, interactive widgets, recommended content) to improve user engagement.
