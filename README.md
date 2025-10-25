@@ -21,7 +21,8 @@
 ~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
 ~~- Social share cards~~
 
-- set up the URL I've already owned for a million years [wip]
+~~- set up the URL I've already owned for a million years ~~
+
 - Browser review [wip]
 - Audit of keyboard nav [wip]
 - Audit VoiceOver [wip]
@@ -32,7 +33,7 @@
 - PageSpeed Insights
 - SEO / get indexed
 - Review repo settings, readme, GitHub profile
-- on iOS menu bar causes pink gaps in bottom corners
+- on iOS, expanded menu bar causes pink gaps in bottom corners
 
 ### Nice to have
 

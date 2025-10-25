@@ -1,18 +1,17 @@
 ---
 import ContactInfo from "./ContactInfo.astro";
 import { basics } from "@resume";
-const { summary, skills, label, location } = basics;
-const { city, region } = location;
+const { summary } = basics;
 ---
 
 <section class="profile">
-  <h2 class="profile__title">
-    {label}
-    <span aria-hidden="true">/</span>
-    {city}, {region}
-  </h2>
+  <!--<h2 class="profile__title">-->
+  <!--  {label}-->
+  <!--  <span aria-hidden="true">/</span>-->
+  <!--  {city}, {region}-->
+  <!--</h2>-->
   <p class="profile__summary">{summary}</p>
-  <p class="profile__skills">{skills}</p>
+  <!--<p class="profile__skills">{skills}</p>-->
   <ContactInfo />
 </section>
 
@@ -39,10 +38,14 @@ const { city, region } = location;
 
   .profile__summary {
     font-size: 1.2em;
+      font-weight: 500;
+      margin-block: 0 1em;
   }
 
-  .profile__title {
-    -webkit-font-smoothing: antialiased;
-    margin-block: 0 0.5em;
-  }
+ <!--.profile__skills {-->
+ <!--    text-transform: uppercase;-->
+ <!--    font-weight: 600;-->
+ <!--    letter-spacing: 0.07em;-->
+ <!--    -webkit-font-smoothing: antialiased;-->
+ <!--}-->
 </style>
