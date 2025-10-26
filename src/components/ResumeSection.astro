@@ -3,7 +3,7 @@ const { title, class: className } = Astro.props;
 ---
 
 <section class:list={["resume__section", className]}>
-  {title && <h3 class="resume__section-title">{title}</h3>}
+  {title && <h2 class="resume__section-title">{title}</h2>}
   <slot />
 </section>
 <style>
