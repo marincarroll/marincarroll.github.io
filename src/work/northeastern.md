@@ -4,8 +4,7 @@ position: "Full-Stack Developer"
 startDate: "Aug 2022"
 ---
 
-I currently work in the newsroom at Northeastern Global News, working to drive user engagement and continually maintain a large codebase.
-
+Northeastern Global News is a high-traffic news & PR site (1m+ views per month). I create components to drive user engagement and improve publishing flow while continually maintaining a large codebase.
 This year I worked on:
 
 - Spearheading an initiative to ensure analytics tags' GDPR compliance, using GTM & TrustArc.
