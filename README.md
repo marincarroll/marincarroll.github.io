@@ -14,14 +14,13 @@
 
 ### Crucial
 
-~~- add data for each job~~
-~~- Finish tweaking resume area styles~~
-~~- print mode~~
-~~- favicons~~
-~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
-~~- Social share cards~~
-
-~~- set up the URL I've already owned for a million years ~~
+- ~~- add data for each job~~
+- ~~- Finish tweaking resume area styles~~
+- ~~- print mode~~
+- ~~- favicons~~
+- ~~- Buggy flashing around bottom of header area on Desktop Safari & FF~~
+- ~~- Social share cards~~
+- ~~ set up the URL I've already owned for a million years ~~
 
 - Browser review [wip]
 - Audit of keyboard nav [wip]
